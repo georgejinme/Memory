@@ -47,16 +47,7 @@ class MoLoginController: MoBGController{
         let blurView = FXBlurView(frame: self.MoBGImageView.bounds)
         blurView.dynamic = false
         blurView.tintColor = UIColor.clearColor()
-        blurView.blurRadius = 0
-        self.MoBGImageView.addSubview(blurView)
-        
-        let animation: CAKeyframeAnimation = CAKeyframeAnimation()
-        animation.values = [0, 10, 20, 30, 40]
-        animation.duration = 0.3
-        animation.autoreverses = false
-        blurView.layer.addAnimation(animation, forKey: "blurRadius")
-        
         blurView.blurRadius = 40
-        
+        self.MoBGImageView.addSubview(blurView)
     }
 }
