@@ -18,7 +18,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         blurEffect()
-        inputPassword("请设置账号密码, 右划确认")
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,6 +31,11 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
         addConstraint(blurView, 0.0, 0.0, self.MoBGImageView.frame.size.width, 50.0)
         blurView.dynamic = false
         blurView.tintColor = UIColor.clearColor()
+        if (NSUserDefaults.standardUserDefaults().objectForKey("password") == nil){
+            inputPassword("Please Set Your Password. Right Swipe to Confirm")
+        }else{
+            inputPassword("Please Input Your Password. Right Swipe to Login")
+        }
     }
     
     func inputPassword(text: String){
@@ -43,6 +47,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
         passwordInput.secureTextEntry = true
         passwordInput.clearButtonMode = UITextFieldViewMode.WhileEditing
         passwordInput.returnKeyType = UIReturnKeyType.Done
+        passwordInput.font = UIFont.systemFontOfSize(14)
         self.view.addSubview(passwordInput)
         self.view.bringSubviewToFront(passwordInput)
         addConstraint(passwordInput, 0.0, 0.0, self.view.frame.size.width, 50.0)
