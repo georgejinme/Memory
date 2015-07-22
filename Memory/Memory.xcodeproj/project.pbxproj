@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE5E438ED408A981E4C9C72 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */; };
-		FFF1801D1B5F4A7600C450DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1801C1B5F4A7600C450DE /* ViewController.swift */; };
-		FFF180201B5F4A7600C450DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF1801E1B5F4A7600C450DE /* Main.storyboard */; };
 		FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF180211B5F4A7700C450DE /* Images.xcassets */; };
 		FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF180231B5F4A7700C450DE /* LaunchScreen.xib */; };
 		FFF180311B5F4A7700C450DE /* MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180301B5F4A7700C450DE /* MemoryTests.swift */; };
 		FFF1803B1B5F4ABD00C450DE /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF1803A1B5F4ABD00C450DE /* LocalAuthentication.framework */; };
-		FFF1803E1B5F4F2E00C450DE /* MoLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1803D1B5F4F2E00C450DE /* MoLoginError.swift */; };
+		FFF1803E1B5F4F2E00C450DE /* MoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */; };
+		FFF180401B5F5ED600C450DE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FFF1803F1B5F5ED600C450DE /* Podfile */; };
+		FFF180441B5F632E00C450DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF180421B5F632E00C450DE /* Main.storyboard */; };
+		FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180461B5F66E000C450DE /* MoBGController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9AE5E438ED408A981E4C9C72 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF180151B5F4A7600C450DE /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF180191B5F4A7600C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFF1801C1B5F4A7600C450DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFF1801F1B5F4A7600C450DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF180211B5F4A7700C450DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FFF180241B5F4A7700C450DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FFF1802A1B5F4A7700C450DE /* MemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF1802F1B5F4A7700C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF180301B5F4A7700C450DE /* MemoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTests.swift; sourceTree = "<group>"; };
 		FFF1803A1B5F4ABD00C450DE /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		FFF1803D1B5F4F2E00C450DE /* MoLoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoLoginError.swift; sourceTree = "<group>"; };
+		FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoLogin.swift; sourceTree = "<group>"; };
+		FFF1803F1B5F5ED600C450DE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FFF180431B5F632E00C450DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFF180461B5F66E000C450DE /* MoBGController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoBGController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF1803B1B5F4ABD00C450DE /* LocalAuthentication.framework in Frameworks */,
+				F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,13 +68,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029017DF0831B4BCDD8CF5AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE5E438ED408A981E4C9C72 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDF02E43EFBC4B31CF757139 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */,
+				37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FFF1800C1B5F4A7600C450DE = {
 			isa = PBXGroup;
 			children = (
+				FFF1803F1B5F5ED600C450DE /* Podfile */,
 				FFF1803A1B5F4ABD00C450DE /* LocalAuthentication.framework */,
 				FFF180171B5F4A7600C450DE /* Memory */,
 				FFF1802D1B5F4A7700C450DE /* MemoryTests */,
 				FFF180161B5F4A7600C450DE /* Products */,
+				CDF02E43EFBC4B31CF757139 /* Pods */,
+				029017DF0831B4BCDD8CF5AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +110,11 @@
 		FFF180171B5F4A7600C450DE /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				FFF180451B5F66C800C450DE /* MemoryMain */,
 				FFF1803C1B5F4F1A00C450DE /* Login */,
 				FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */,
-				FFF1801C1B5F4A7600C450DE /* ViewController.swift */,
-				FFF1801E1B5F4A7600C450DE /* Main.storyboard */,
 				FFF180211B5F4A7700C450DE /* Images.xcassets */,
+				FFF180421B5F632E00C450DE /* Main.storyboard */,
 				FFF180231B5F4A7700C450DE /* LaunchScreen.xib */,
 				FFF180181B5F4A7600C450DE /* Supporting Files */,
 			);
@@ -122,9 +149,17 @@
 		FFF1803C1B5F4F1A00C450DE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FFF1803D1B5F4F2E00C450DE /* MoLoginError.swift */,
+				FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		FFF180451B5F66C800C450DE /* MemoryMain */ = {
+			isa = PBXGroup;
+			children = (
+				FFF180461B5F66E000C450DE /* MoBGController.swift */,
+			);
+			name = MemoryMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFF180341B5F4A7700C450DE /* Build configuration list for PBXNativeTarget "Memory" */;
 			buildPhases = (
+				94757918BB00C208F7F8373B /* Check Pods Manifest.lock */,
 				FFF180111B5F4A7600C450DE /* Sources */,
 				FFF180121B5F4A7600C450DE /* Frameworks */,
 				FFF180131B5F4A7600C450DE /* Resources */,
+				5569DDCEF13AFF8157F68E1C /* Embed Pods Frameworks */,
+				D6FB3740673933BDFAB84784 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,9 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF180201B5F4A7600C450DE /* Main.storyboard in Resources */,
 				FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */,
+				FFF180401B5F5ED600C450DE /* Podfile in Resources */,
 				FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */,
+				FFF180441B5F632E00C450DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +262,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5569DDCEF13AFF8157F68E1C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94757918BB00C208F7F8373B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FB3740673933BDFAB84784 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FFF180111B5F4A7600C450DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF1801D1B5F4A7600C450DE /* ViewController.swift in Sources */,
 				FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */,
-				FFF1803E1B5F4F2E00C450DE /* MoLoginError.swift in Sources */,
+				FFF1803E1B5F4F2E00C450DE /* MoLogin.swift in Sources */,
+				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,20 +340,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFF1801E1B5F4A7600C450DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFF1801F1B5F4A7600C450DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFF180231B5F4A7700C450DE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FFF180241B5F4A7700C450DE /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FFF180421B5F632E00C450DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFF180431B5F632E00C450DE /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -355,6 +442,7 @@
 		};
 		FFF180351B5F4A7700C450DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -366,6 +454,7 @@
 		};
 		FFF180361B5F4A7700C450DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -428,6 +517,7 @@
 				FFF180361B5F4A7700C450DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFF180371B5F4A7700C450DE /* Build configuration list for PBXNativeTarget "MemoryTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +526,7 @@
 				FFF180391B5F4A7700C450DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

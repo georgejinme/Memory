@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8D4B479B-226F-4E01-BAA1-54732A382E4A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Memory</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AE37CA64E91DD1425CEA082E16BCC5BD9B06314A</key>
+		<string>https://github.com/gougoumemeda/Memory.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Memory/Memory.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AE37CA64E91DD1425CEA082E16BCC5BD9B06314A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gougoumemeda/Memory.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AE37CA64E91DD1425CEA082E16BCC5BD9B06314A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AE37CA64E91DD1425CEA082E16BCC5BD9B06314A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Memory</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        MoTouchIDLogin()
+        self.window!.rootViewController = MoLoginController()
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
@@ -41,20 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func MoTouchIDLogin(){
-        let touchID = LAContext()
-        let authError: NSErrorPointer = NSErrorPointer()
-        if touchID.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: authError) {
-            touchID.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Secret is the king.", reply: {(success, error) in
-                if success{
-                    println("success")
-                }else{
-                    println("error")
-                }
-            })
-        }
     }
 
 
