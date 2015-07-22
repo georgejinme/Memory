@@ -17,6 +17,7 @@
 		FFF180401B5F5ED600C450DE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FFF1803F1B5F5ED600C450DE /* Podfile */; };
 		FFF180441B5F632E00C450DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF180421B5F632E00C450DE /* Main.storyboard */; };
 		FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180461B5F66E000C450DE /* MoBGController.swift */; };
+		FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,9 @@
 		FFF1803F1B5F5ED600C450DE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		FFF180431B5F632E00C450DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF180461B5F66E000C450DE /* MoBGController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoBGController.swift; sourceTree = "<group>"; };
+		FFF180491B5F6CAC00C450DE /* Memory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memory-Bridging-Header.h"; sourceTree = "<group>"; };
+		FFF1804A1B5F6CAD00C450DE /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		FFF1800C1B5F4A7600C450DE = {
 			isa = PBXGroup;
 			children = (
+				FFF180481B5F6C9A00C450DE /* ThirdLib */,
 				FFF1803F1B5F5ED600C450DE /* Podfile */,
 				FFF1803A1B5F4ABD00C450DE /* LocalAuthentication.framework */,
 				FFF180171B5F4A7600C450DE /* Memory */,
@@ -160,6 +165,16 @@
 				FFF180461B5F66E000C450DE /* MoBGController.swift */,
 			);
 			name = MemoryMain;
+			sourceTree = "<group>";
+		};
+		FFF180481B5F6C9A00C450DE /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				FFF1804A1B5F6CAD00C450DE /* FXBlurView.h */,
+				FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */,
+				FFF180491B5F6CAC00C450DE /* Memory-Bridging-Header.h */,
+			);
+			name = ThirdLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */,
+				FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */,
 				FFF1803E1B5F4F2E00C450DE /* MoLogin.swift in Sources */,
 				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);
@@ -445,10 +461,13 @@
 			baseConfigurationReference = 2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Memory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Memory-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -457,10 +476,12 @@
 			baseConfigurationReference = 37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Memory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Memory-Bridging-Header.h";
 			};
 			name = Release;
 		};
