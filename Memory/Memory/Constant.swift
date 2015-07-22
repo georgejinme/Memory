@@ -18,3 +18,5 @@ func addConstraint(view: UIView, x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat)
         make.height.equalTo(h)
     }
 }
+
+var FIRST_LOGIN:Bool = false

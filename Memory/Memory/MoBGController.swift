@@ -28,4 +28,6 @@ class MoBGController: UIViewController{
         self.MoBGImageView.image = UIImage(named: "BACKGROUND")
         self.view.addSubview(MoBGImageView)
     }
+    
+    
 }

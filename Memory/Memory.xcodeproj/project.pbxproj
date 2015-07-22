@@ -12,12 +12,13 @@
 		FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF180211B5F4A7700C450DE /* Images.xcassets */; };
 		FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF180231B5F4A7700C450DE /* LaunchScreen.xib */; };
 		FFF180311B5F4A7700C450DE /* MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180301B5F4A7700C450DE /* MemoryTests.swift */; };
-		FFF1803E1B5F4F2E00C450DE /* MoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */; };
+		FFF1803E1B5F4F2E00C450DE /* MoLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1803D1B5F4F2E00C450DE /* MoLoginController.swift */; };
 		FFF180401B5F5ED600C450DE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FFF1803F1B5F5ED600C450DE /* Podfile */; };
 		FFF180441B5F632E00C450DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF180421B5F632E00C450DE /* Main.storyboard */; };
 		FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180461B5F66E000C450DE /* MoBGController.swift */; };
 		FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */; };
 		FFF180521B5F903500C450DE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF180511B5F903500C450DE /* Constant.swift */; };
+		FFF1805D1B5FF77200C450DE /* MoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1805C1B5FF77200C450DE /* MoInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,14 +43,15 @@
 		FFF1802A1B5F4A7700C450DE /* MemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF1802F1B5F4A7700C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF180301B5F4A7700C450DE /* MemoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTests.swift; sourceTree = "<group>"; };
-		FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoLogin.swift; sourceTree = "<group>"; };
-		FFF1803F1B5F5ED600C450DE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FFF1803D1B5F4F2E00C450DE /* MoLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoLoginController.swift; sourceTree = "<group>"; };
+		FFF1803F1B5F5ED600C450DE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FFF180431B5F632E00C450DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF180461B5F66E000C450DE /* MoBGController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoBGController.swift; sourceTree = "<group>"; };
 		FFF180491B5F6CAC00C450DE /* Memory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memory-Bridging-Header.h"; sourceTree = "<group>"; };
 		FFF1804A1B5F6CAD00C450DE /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		FFF180511B5F903500C450DE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FFF1805C1B5FF77200C450DE /* MoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,6 @@
 			children = (
 				FFF180501B5F902100C450DE /* Other */,
 				FFF180451B5F66C800C450DE /* MemoryMain */,
-				FFF1803C1B5F4F1A00C450DE /* Login */,
 				FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */,
 				FFF180211B5F4A7700C450DE /* Images.xcassets */,
 				FFF180421B5F632E00C450DE /* Main.storyboard */,
@@ -150,18 +151,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FFF1803C1B5F4F1A00C450DE /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				FFF1803D1B5F4F2E00C450DE /* MoLogin.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
 		FFF180451B5F66C800C450DE /* MemoryMain */ = {
 			isa = PBXGroup;
 			children = (
 				FFF180461B5F66E000C450DE /* MoBGController.swift */,
+				FFF1803D1B5F4F2E00C450DE /* MoLoginController.swift */,
+				FFF1805C1B5FF77200C450DE /* MoInfo.swift */,
 			);
 			name = MemoryMain;
 			sourceTree = "<group>";
@@ -340,7 +335,8 @@
 				FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */,
 				FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */,
 				FFF180521B5F903500C450DE /* Constant.swift in Sources */,
-				FFF1803E1B5F4F2E00C450DE /* MoLogin.swift in Sources */,
+				FFF1805D1B5FF77200C450DE /* MoInfo.swift in Sources */,
+				FFF1803E1B5F4F2E00C450DE /* MoLoginController.swift in Sources */,
 				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

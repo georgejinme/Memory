@@ -27,14 +27,14 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
     
     
     func blurEffect(){
-        self.MoBGImageView.addSubview(blurView)
-        addConstraint(blurView, 0.0, 0.0, self.MoBGImageView.frame.size.width, 50.0)
+        self.view.addSubview(blurView)
+        addConstraint(blurView, 0.0, 0.0, self.view.frame.size.width, 50.0)
         blurView.dynamic = false
         blurView.tintColor = UIColor.clearColor()
-        if (NSUserDefaults.standardUserDefaults().objectForKey("password") == nil){
-            inputPassword("Please Set Your Password. Right Swipe to Confirm")
+        if (FIRST_LOGIN){
+            inputPassword("Please Set Your Password. Left Swipe to Confirm")
         }else{
-            inputPassword("Please Input Your Password. Right Swipe to Login")
+            inputPassword("Please Input Your Password. Left Swipe to Login")
         }
     }
     
