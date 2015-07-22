@@ -26,6 +26,6 @@ class MoBGController: UIViewController{
     func initImage(){
         self.MoBGImageView.frame = self.view.bounds
         self.MoBGImageView.image = UIImage(named: "BACKGROUND")
-        self.view = MoBGImageView
+        self.view.addSubview(MoBGImageView)
     }
 }

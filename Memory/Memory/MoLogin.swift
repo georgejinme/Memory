@@ -8,13 +8,17 @@
 
 import Foundation
 import UIKit
-import SnapKit
 
-class MoLoginController: MoBGController{
+class MoLoginController: MoBGController, UITextFieldDelegate{
+    
+    var blurView = FXBlurView()
+    var passwordInput = UITextField()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         blurEffect()
+        inputPassword("请设置账号密码, 右划确认")
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,17 +28,33 @@ class MoLoginController: MoBGController{
     
     
     func blurEffect(){
-        var blurView = FXBlurView()
         self.MoBGImageView.addSubview(blurView)
-        blurView.snp_makeConstraints{(make) -> Void in
-            make.centerX.equalTo(0)
-            make.centerY.equalTo(0)
-            make.width.equalTo(self.MoBGImageView.frame.size.width)
-            make.height.equalTo(50)
-        }
-        blurView.dynamic = true
+        addConstraint(blurView, 0.0, 0.0, self.MoBGImageView.frame.size.width, 50.0)
+        blurView.dynamic = false
         blurView.tintColor = UIColor.clearColor()
-        self.MoBGImageView.addSubview(blurView)
     }
     
+    func inputPassword(text: String){
+        passwordInput.backgroundColor = UIColor.clearColor()
+        passwordInput.borderStyle = UITextBorderStyle.None
+        passwordInput.delegate = self
+        passwordInput.textAlignment = NSTextAlignment.Center
+        passwordInput.placeholder = text
+        passwordInput.secureTextEntry = true
+        passwordInput.clearButtonMode = UITextFieldViewMode.WhileEditing
+        passwordInput.returnKeyType = UIReturnKeyType.Done
+        self.view.addSubview(passwordInput)
+        self.view.bringSubviewToFront(passwordInput)
+        addConstraint(passwordInput, 0.0, 0.0, self.view.frame.size.width, 50.0)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        passwordInput.resignFirstResponder()
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        passwordInput.resignFirstResponder()
+        return true
+    }
 }
