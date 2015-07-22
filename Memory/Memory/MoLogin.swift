@@ -8,14 +8,13 @@
 
 import Foundation
 import UIKit
-import LocalAuthentication
+import SnapKit
 
 class MoLoginController: MoBGController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         blurEffect()
-        MoTouchIDLogin()
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,30 +23,18 @@ class MoLoginController: MoBGController{
     }
     
     
-    func initLogo(){
-        
-    }
-    
-    func MoTouchIDLogin(){
-        let touchID = LAContext()
-        let authError: NSErrorPointer = NSErrorPointer()
-        if touchID.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: authError) {
-            touchID.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Secret is the king.", reply: {(success, error) in
-                if success{
-                    println("login success")
-                }else{
-                    println(error)
-                    
-                }
-            })
-        }
-    }
-    
     func blurEffect(){
-        let blurView = FXBlurView(frame: self.MoBGImageView.bounds)
-        blurView.dynamic = false
+        var blurView = FXBlurView()
+        self.MoBGImageView.addSubview(blurView)
+        blurView.snp_makeConstraints{(make) -> Void in
+            make.centerX.equalTo(0)
+            make.centerY.equalTo(0)
+            make.width.equalTo(self.MoBGImageView.frame.size.width)
+            make.height.equalTo(50)
+        }
+        blurView.dynamic = true
         blurView.tintColor = UIColor.clearColor()
-        blurView.blurRadius = 40
         self.MoBGImageView.addSubview(blurView)
     }
+    
 }
