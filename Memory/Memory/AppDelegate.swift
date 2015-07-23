@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FIRST_LOGIN = true
         }else{
             FIRST_LOGIN = false
+            println(NSUserDefaults.standardUserDefaults().objectForKey("password"))
         }
         self.window!.rootViewController = MoLoginController()
         self.window?.backgroundColor = UIColor.whiteColor()

@@ -20,3 +20,4 @@ func addConstraint(view: UIView, x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat)
 }
 
 var FIRST_LOGIN:Bool = false
+var LOGINED: Bool = false

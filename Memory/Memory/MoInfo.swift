@@ -12,6 +12,7 @@ import UIKit
 class MoInfo:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.whiteColor()
     }
 
     required init(coder aDecoder: NSCoder) {

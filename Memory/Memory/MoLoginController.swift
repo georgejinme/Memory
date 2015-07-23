@@ -12,12 +12,22 @@ import UIKit
 class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
     var blurView = FXBlurView()
+    var infoView = MoInfo()
+    
     var passwordInput = UITextField()
     
     var beginLoc: CGPoint = CGPoint()
     
+    var loginRequest: Bool = false
+    
+    var views: [UIView] = []
+    var currentView = 0
+    var oldView = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        views.append(blurView)
+        views.append(infoView)
         blurEffect()
     }
     
@@ -53,7 +63,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         passwordInput.frame = CGRectMake(0, 0, self.view.frame.size.width, 50)
         self.blurView.addSubview(passwordInput)
         self.blurView.bringSubviewToFront(passwordInput)
-        println(passwordInput.frame)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -67,21 +76,62 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         var currLoc = touch.locationInView(self.view)
         var preLoc = touch.previousLocationInView(self.view)
         var offset = CGPointMake(currLoc.x - preLoc.x, currLoc.y - preLoc.y)
-        self.blurView.center = CGPointMake(self.blurView.center.x + offset.x, self.blurView.center.y)
+        self.views[currentView].center = CGPointMake(self.views[currentView].center.x + offset.x, self.views[currentView].center.y)
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
         var endLoc = touch.locationInView(self.view)
-        var newCenter = CGPoint()
-        if (beginLoc.x - endLoc.x > 50){
-            newCenter = CGPointMake(0 - self.blurView.frame.size.width / 2, self.blurView.center.y)
-        }else{
-            newCenter = CGPointMake(self.view.frame.size.width / 2, self.blurView.center.y)
+       
+        var moveOrNot = moveJudge(self.beginLoc, end: endLoc)
+        var loginRes = ""
+        
+        if loginRequest && !LOGINED{
+            loginRes = login()
+            if loginRes == "fail"{
+                currentView = 0
+            }
         }
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-            self.blurView.center = newCenter
+        
+        if (moveOrNot != "not move" && loginRes != "fail"){
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.views[self.oldView].center = CGPointMake(-1 * self.view.center.x, self.views[self.oldView].center.y)
             }, completion: nil)
+        }
+        
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.views[self.currentView].center = CGPointMake(self.view.center.x, self.views[self.currentView].center.y)
+            }, completion: nil)
+        
+        if (loginRes == "success"){
+            loginRes = "not use"
+            self.views.removeAtIndex(0)
+            oldView = 0
+            currentView = 0
+        }
+    }
+    
+    func moveJudge(start: CGPoint, end: CGPoint) -> String{
+        if (end.x - start.x > 50){
+            if currentView > 0{
+                oldView = currentView
+                currentView -= 1
+                return "right"
+            }
+            else {return "not move"}
+        }else if (end.x - start.x < -50){
+            if currentView < self.views.count - 1{
+                oldView = currentView
+                currentView += 1
+                if (!loginRequest && currentView == 1 && !LOGINED){
+                    loginRequest = true
+                }
+                return "left"
+            }
+            else {return "not move"}
+        }else{
+            return "not move"
+        }
     }
     
     
@@ -90,6 +140,32 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         return true
     }
     
+    func login() -> String{
+        loginRequest = false
+        if (FIRST_LOGIN){
+            if ((self.passwordInput.text as NSString).length > 4){
+                NSUserDefaults.standardUserDefaults().setObject(self.passwordInput.text, forKey: "password")
+                println("set password")
+                return "success"
+            }else{
+                println("password too short")
+                self.passwordInput.text = ""
+                self.passwordInput.placeholder = "Your password must be longer than 4 characters."
+                return "fail"
+            }
+        }else{
+            if (self.passwordInput.text != NSUserDefaults.standardUserDefaults().objectForKey("password") as? String){
+                println("login fail")
+                self.passwordInput.text = ""
+                self.passwordInput.placeholder = "wrong password."
+                return "fail"
+            }else{
+                LOGINED = true
+                println("login success")
+                return "success"
+            }
+        }
+    }
 }
 
 
