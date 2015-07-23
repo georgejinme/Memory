@@ -154,9 +154,8 @@
 		FFF180451B5F66C800C450DE /* MemoryMain */ = {
 			isa = PBXGroup;
 			children = (
-				FFF180461B5F66E000C450DE /* MoBGController.swift */,
-				FFF1803D1B5F4F2E00C450DE /* MoLoginController.swift */,
-				FFF1805C1B5FF77200C450DE /* MoInfo.swift */,
+				FFF1805F1B60924100C450DE /* View */,
+				FFF1805E1B60923B00C450DE /* Controller */,
 			);
 			name = MemoryMain;
 			sourceTree = "<group>";
@@ -177,6 +176,23 @@
 				FFF180511B5F903500C450DE /* Constant.swift */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		FFF1805E1B60923B00C450DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFF180461B5F66E000C450DE /* MoBGController.swift */,
+				FFF1803D1B5F4F2E00C450DE /* MoLoginController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FFF1805F1B60924100C450DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFF1805C1B5FF77200C450DE /* MoInfo.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

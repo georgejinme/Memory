@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class MoLoginController: MoBGController, UITextFieldDelegate{
+class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
     var blurView = FXBlurView()
     var passwordInput = UITextField()
     
+    var touchBeginLoc: CGPoint = CGPoint()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,9 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
     
     
     func blurEffect(){
+        blurView.frame = CGRectMake(0, 0, self.view.frame.size.width, 50.0)
+        blurView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
         self.view.addSubview(blurView)
-        addConstraint(blurView, 0.0, 0.0, self.view.frame.size.width, 50.0)
         blurView.dynamic = false
         blurView.tintColor = UIColor.clearColor()
         if (FIRST_LOGIN){
@@ -48,13 +50,31 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
         passwordInput.clearButtonMode = UITextFieldViewMode.WhileEditing
         passwordInput.returnKeyType = UIReturnKeyType.Done
         passwordInput.font = UIFont.systemFontOfSize(14)
-        self.view.addSubview(passwordInput)
-        self.view.bringSubviewToFront(passwordInput)
-        addConstraint(passwordInput, 0.0, 0.0, self.view.frame.size.width, 50.0)
+        passwordInput.frame = CGRectMake(0, 0, self.view.frame.size.width, 50)
+        self.blurView.addSubview(passwordInput)
+        self.blurView.bringSubviewToFront(passwordInput)
+        println(passwordInput.frame)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         passwordInput.resignFirstResponder()
+        var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
+        self.touchBeginLoc = touch.locationInView(self.view)
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
+        var currLoc = touch.locationInView(self.view)
+        var preLoc = touch.previousLocationInView(self.view)
+        var offset = CGPointMake(currLoc.x - preLoc.x, currLoc.y - preLoc.y)
+        self.blurView.center = CGPointMake(self.blurView.center.x + offset.x, self.blurView.center.y + offset.y)
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //if (self.leftSwiping){
+        //    self.leftSwiping = false
+            println("end")
+        //}
     }
     
     
@@ -62,4 +82,14 @@ class MoLoginController: MoBGController, UITextFieldDelegate{
         passwordInput.resignFirstResponder()
         return true
     }
+    
 }
+
+
+
+
+
+
+
+
+
