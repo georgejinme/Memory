@@ -11,8 +11,8 @@ import UIKit
 
 class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
-    var blurView = FXBlurView()
-    var infoView = MoInfo()
+    var blurView: FXBlurView?
+    var infoView: MoInfo?
     
     var passwordInput = UITextField()
     
@@ -26,9 +26,8 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        views.append(blurView)
-        views.append(infoView)
         blurEffect()
+        initView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,13 +35,21 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         // Dispose of any resources that can be recreated.
     }
     
+    func initView(){
+        infoView = MoInfo(frame: self.view.bounds)
+        infoView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
+        self.view.addSubview(infoView!)
+        views.append(infoView!)
+    }
+    
     
     func blurEffect(){
-        blurView.frame = CGRectMake(0, 0, self.view.frame.size.width, 50.0)
-        blurView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
-        self.view.addSubview(blurView)
-        blurView.dynamic = true
-        blurView.tintColor = UIColor.clearColor()
+        blurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 50.0))
+        blurView!.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
+        self.view.addSubview(blurView!)
+        blurView!.dynamic = true
+        blurView!.tintColor = UIColor.clearColor()
+        views.append(blurView!)
         if (FIRST_LOGIN){
             inputPassword("Please Set Your Password. Left Swipe to Confirm")
         }else{
@@ -61,8 +68,8 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         passwordInput.returnKeyType = UIReturnKeyType.Done
         passwordInput.font = UIFont.systemFontOfSize(14)
         passwordInput.frame = CGRectMake(0, 0, self.view.frame.size.width, 50)
-        self.blurView.addSubview(passwordInput)
-        self.blurView.bringSubviewToFront(passwordInput)
+        self.blurView!.addSubview(passwordInput)
+        self.blurView!.bringSubviewToFront(passwordInput)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
