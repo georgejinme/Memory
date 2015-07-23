@@ -73,15 +73,15 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
         var endLoc = touch.locationInView(self.view)
+        var newCenter = CGPoint()
         if (beginLoc.x - endLoc.x > 50){
-            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.blurView.center = CGPointMake(0 - self.blurView.frame.size.width / 2, self.blurView.center.y)
-            }, completion: nil)
+            newCenter = CGPointMake(0 - self.blurView.frame.size.width / 2, self.blurView.center.y)
         }else{
-            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.blurView.center = CGPointMake(self.view.frame.size.width / 2, self.blurView.center.y)
-                }, completion: nil)
+            newCenter = CGPointMake(self.view.frame.size.width / 2, self.blurView.center.y)
         }
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.blurView.center = newCenter
+            }, completion: nil)
     }
     
     
