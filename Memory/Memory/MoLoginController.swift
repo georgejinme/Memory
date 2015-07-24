@@ -15,13 +15,10 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     var setUpBlurView: FXBlurView?
     var infoView: MoInfo?
     
-    var passwordInput = UITextField()
-    
     var beginLoc: CGPoint = CGPoint()
     
     var loginRequest: Bool = false
     var setUping:Bool = false
-    var mainPage:Bool = false
     
     var views: [UIView] = []
     var currentView = 0
@@ -38,25 +35,24 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     }
     
     func initView(){
-        loginBlurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 50.0))
-        loginBlurView!.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
+        var loginPlaceHolder = ""
+        loginBlurView = initLoginView(self.view)
         self.view.addSubview(loginBlurView!)
-        loginBlurView!.dynamic = true
-        loginBlurView!.tintColor = UIColor.clearColor()
         views.append(loginBlurView!)
         if (FIRST_LOGIN){
-            inputPassword("Please Set Your Password. Left Swipe to Confirm")
+            loginPlaceHolder = "Please Set Your Password. Left Swipe to Confirm"
         }else{
-            inputPassword("Please Input Your Password. Left Swipe to Login")
+            loginPlaceHolder = "Please Input Your Password. Left Swipe to Login"
         }
+        initInputPassword(loginBlurView!, loginPlaceHolder)
         
         if (FIRST_LOGIN){
-            setUpBlurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 150.0))
-            setUpBlurView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
+            setUpBlurView = initSetUpView(self.view)
             self.view.addSubview(setUpBlurView!)
-            setUpBlurView!.dynamic = true
-            setUpBlurView!.tintColor = UIColor.clearColor()
             views.append(setUpBlurView!)
+            initMyPlace(setUpBlurView!, "Where am I?")
+            initUrPlace(setUpBlurView!, "Where are you?")
+            initMemoryTime(setUpBlurView!, "When did your memory begin?")
         }
         
         infoView = MoInfo(frame: self.view.bounds)
@@ -65,23 +61,10 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         views.append(infoView!)
     }
     
-    func inputPassword(text: String){
-        passwordInput.backgroundColor = UIColor.clearColor()
-        passwordInput.borderStyle = UITextBorderStyle.None
-        passwordInput.delegate = self
-        passwordInput.textAlignment = NSTextAlignment.Center
-        passwordInput.placeholder = text
-        passwordInput.secureTextEntry = true
-        passwordInput.clearButtonMode = UITextFieldViewMode.WhileEditing
-        passwordInput.returnKeyType = UIReturnKeyType.Done
-        passwordInput.font = UIFont.systemFontOfSize(14)
-        passwordInput.frame = CGRectMake(0, 0, self.view.frame.size.width, 50)
-        self.loginBlurView!.addSubview(passwordInput)
-        self.loginBlurView!.bringSubviewToFront(passwordInput)
-    }
-    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         passwordInput.resignFirstResponder()
+        myPlaceSetUp.resignFirstResponder()
+        urPlaceSetUp.resignFirstResponder()
         var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
         self.beginLoc = touch.locationInView(self.view)
     }
@@ -165,27 +148,29 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         passwordInput.resignFirstResponder()
+        myPlaceSetUp.resignFirstResponder()
+        urPlaceSetUp.resignFirstResponder()
         return true
     }
     
     func login() -> String{
         loginRequest = false
         if (FIRST_LOGIN){
-            if ((self.passwordInput.text as NSString).length > 4){
-                NSUserDefaults.standardUserDefaults().setObject(self.passwordInput.text, forKey: "password")
+            if ((passwordInput.text as NSString).length > 4){
+                NSUserDefaults.standardUserDefaults().setObject(passwordInput.text, forKey: "password")
                 println("set password")
                 return "success"
             }else{
                 println("password too short")
-                self.passwordInput.text = ""
-                self.passwordInput.placeholder = "Your password must be longer than 4 characters."
+                passwordInput.text = ""
+                passwordInput.placeholder = "Your password must be longer than 4 characters."
                 return "fail"
             }
         }else{
-            if (self.passwordInput.text != NSUserDefaults.standardUserDefaults().objectForKey("password") as? String){
+            if (passwordInput.text != NSUserDefaults.standardUserDefaults().objectForKey("password") as? String){
                 println("login fail")
-                self.passwordInput.text = ""
-                self.passwordInput.placeholder = "wrong password."
+                passwordInput.text = ""
+                passwordInput.placeholder = "wrong password."
                 return "fail"
             }else{
                 LOGINED = true
