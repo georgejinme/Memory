@@ -15,6 +15,8 @@ class MoInfo:UIView{
     var myPlace: UILabel?
     var urPlace: UILabel?
     
+    var twinkling: Bool = false
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initPlaceLabel()
@@ -45,7 +47,14 @@ class MoInfo:UIView{
     }
     
     func beginTwinkle(){
-        myPlace?.twinkle()
-        urPlace?.twinkle()
+        if (twinkling == false){
+            myPlace?.twinkle()
+            urPlace?.twinkle()
+            twinkling = true
+        }
+    }
+    
+    func twinkleUnlocked(){
+        twinkling = false
     }
 }

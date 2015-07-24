@@ -120,6 +120,8 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         
         if (self.views[currentView] == infoView){
             self.infoView?.beginTwinkle()
+        }else{
+            self.infoView?.twinkleUnlocked()
         }
         
     }
