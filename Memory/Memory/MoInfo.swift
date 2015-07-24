@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Twinkle
 
 class MoInfo:UIView{
     
@@ -30,12 +31,14 @@ class MoInfo:UIView{
         urPlace = UILabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         urPlace?.center = CGPointMake(self.frame.size.width / 2, 125)
         
-        myPlace?.text = "我在上海"
-        myPlace?.font = UIFont(name: "Helvetica", size: 36)
+        myPlace?.text = "I, ShangHai"
+        myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         myPlace?.textColor = UIColor.whiteColor()
-        urPlace?.text = "你就在我身边"
-        urPlace?.font = UIFont(name: "Helvetica", size: 36)
+        myPlace!.twinkle()
+        urPlace?.text = "U, By my side"
+        urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         urPlace?.textColor = UIColor.whiteColor()
+        urPlace?.textAlignment = NSTextAlignment.Right
         
         self.addSubview(myPlace!)
         self.addSubview(urPlace!)

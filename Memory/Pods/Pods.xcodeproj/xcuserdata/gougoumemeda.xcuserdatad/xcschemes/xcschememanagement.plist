@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Twinkle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2907B43D35806C6ABEA6621B</key>
+		<key>4A5B474F3805590C05181D53</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87B6C339C2F069BDCD556FD9</key>
+		<key>65161299C60093777EB156E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2DAD60E47044044287FB4FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
