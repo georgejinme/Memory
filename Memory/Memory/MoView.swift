@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class MoView: UIView{
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -17,6 +18,8 @@ class MoView: UIView{
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     func beginAnimate(){
         
     }

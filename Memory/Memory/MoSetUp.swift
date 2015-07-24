@@ -10,8 +10,14 @@ import Foundation
 import UIKit
 
 class MoSetUp: MoView{
+    
+    var blur = FXBlurView()
     override init(frame: CGRect) {
         super.init(frame: frame)
+        blur.frame = self.bounds
+        blur.tintColor = UIColor.clearColor()
+        self.addSubview(blur)
+        
     }
     
     required init(coder aDecoder: NSCoder) {

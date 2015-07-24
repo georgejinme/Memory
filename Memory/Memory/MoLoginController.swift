@@ -11,8 +11,8 @@ import UIKit
 
 class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
-    var blurView: FXBlurView?
-    var setUpView: MoSetUp?
+    var loginBlurView: FXBlurView?
+    var setUpBlurView: FXBlurView?
     var infoView: MoInfo?
     
     var passwordInput = UITextField()
@@ -29,7 +29,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        blurEffect()
         initView()
     }
     
@@ -39,32 +38,31 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     }
     
     func initView(){
+        loginBlurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 50.0))
+        loginBlurView!.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
+        self.view.addSubview(loginBlurView!)
+        loginBlurView!.dynamic = true
+        loginBlurView!.tintColor = UIColor.clearColor()
+        views.append(loginBlurView!)
         if (FIRST_LOGIN){
-            setUpView = MoSetUp(frame: self.view.bounds)
-            setUpView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
-            self.view.addSubview(setUpView!)
-            views.append(setUpView!)
+            inputPassword("Please Set Your Password. Left Swipe to Confirm")
+        }else{
+            inputPassword("Please Input Your Password. Left Swipe to Login")
+        }
+        
+        if (FIRST_LOGIN){
+            setUpBlurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 150.0))
+            setUpBlurView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
+            self.view.addSubview(setUpBlurView!)
+            setUpBlurView!.dynamic = true
+            setUpBlurView!.tintColor = UIColor.clearColor()
+            views.append(setUpBlurView!)
         }
         
         infoView = MoInfo(frame: self.view.bounds)
         infoView!.center = CGPointMake(self.view.frame.size.width * (CGFloat(2 * views.count + 1) / 2), self.view.frame.size.height / 2)
         self.view.addSubview(infoView!)
         views.append(infoView!)
-    }
-    
-    
-    func blurEffect(){
-        blurView = FXBlurView(frame: CGRectMake(0, 0, self.view.frame.size.width, 50.0))
-        blurView!.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
-        self.view.addSubview(blurView!)
-        blurView!.dynamic = true
-        blurView!.tintColor = UIColor.clearColor()
-        views.append(blurView!)
-        if (FIRST_LOGIN){
-            inputPassword("Please Set Your Password. Left Swipe to Confirm")
-        }else{
-            inputPassword("Please Input Your Password. Left Swipe to Login")
-        }
     }
     
     func inputPassword(text: String){
@@ -78,8 +76,8 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         passwordInput.returnKeyType = UIReturnKeyType.Done
         passwordInput.font = UIFont.systemFontOfSize(14)
         passwordInput.frame = CGRectMake(0, 0, self.view.frame.size.width, 50)
-        self.blurView!.addSubview(passwordInput)
-        self.blurView!.bringSubviewToFront(passwordInput)
+        self.loginBlurView!.addSubview(passwordInput)
+        self.loginBlurView!.bringSubviewToFront(passwordInput)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -104,12 +102,12 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         var loginRes = ""
         
         if  moveOrNot == "left"{
-            if views[oldView] == blurView{
+            if views[oldView] == loginBlurView{
                 loginRes = login()
                 if loginRes == "fail"{
                     currentView = 0
                 }
-            }else if views[oldView] == setUpView{
+            }else if views[oldView] == setUpBlurView{
                 setUp()
             }
         }
@@ -137,7 +135,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             }
         }
         
-        if (moveOrNot != "not move" && views[oldView] != blurView && views[currentView] != blurView){
+        if (moveOrNot != "not move" && views[oldView] != loginBlurView && views[currentView] != loginBlurView && views[oldView] != setUpBlurView && views[currentView] != setUpBlurView){
             (self.views[oldView] as! MoView).removeAnimate()
             (self.views[currentView] as! MoView).beginAnimate()
         }
@@ -199,6 +197,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     func setUp(){
         setUping = true
+        
     }
 }
 
