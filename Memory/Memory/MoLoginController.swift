@@ -39,6 +39,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         infoView = MoInfo(frame: self.view.bounds)
         infoView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
         self.view.addSubview(infoView!)
+        
         views.append(infoView!)
     }
     
