@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2DE846B0C2DE053F6EA88742"
-               BuildableName = "Twinkle.framework"
-               BlueprintName = "Pods-Twinkle"
+               BlueprintIdentifier = "C7B69D5A2BC7EE012637C264"
+               BuildableName = "Spring.framework"
+               BlueprintName = "Pods-Spring"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

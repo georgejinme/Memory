@@ -49,9 +49,9 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'SnapKit.framework'
-  install_framework 'Twinkle.framework'
+  install_framework 'Spring.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'SnapKit.framework'
-  install_framework 'Twinkle.framework'
+  install_framework 'Spring.framework'
 fi

@@ -9,18 +9,17 @@
 import Foundation
 import UIKit
 import Twinkle
+import Spring
 
-class MoInfo:UIView{
+class MoInfo:MoView{
     
-    var myPlace: UILabel?
-    var urPlace: UILabel?
-    
+    var myPlace: SpringLabel?
+    var urPlace: SpringLabel?
     var twinkling: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         initPlaceLabel()
-        
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -28,9 +27,9 @@ class MoInfo:UIView{
     }
     
     func initPlaceLabel(){
-        myPlace = UILabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
+        myPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         myPlace?.center = CGPointMake(self.frame.size.width / 2, 50)
-        urPlace = UILabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
+        urPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         urPlace?.center = CGPointMake(self.frame.size.width / 2, 125)
         
         myPlace?.text = "I, ShangHai"
@@ -40,21 +39,25 @@ class MoInfo:UIView{
         urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         urPlace?.textColor = UIColor.whiteColor()
         urPlace?.textAlignment = NSTextAlignment.Right
-        
+    }
+    
+    override func beginAnimate(){
         self.addSubview(myPlace!)
-        self.addSubview(urPlace!)
-        
+        myPlace?.animation = "fadeInLeft"
+        myPlace?.curve = "easeIn"
+        myPlace?.duration = 2.4
+        myPlace?.animateNext({
+            self.addSubview(self.urPlace!)
+            self.urPlace?.animation = "fadeInRight"
+            self.urPlace?.curve = "easeIn"
+            self.urPlace?.duration = 2.4
+            self.urPlace?.animate()
+        })
     }
     
-    func beginTwinkle(){
-        if (twinkling == false){
-            myPlace?.twinkle()
-            urPlace?.twinkle()
-            twinkling = true
-        }
+    override func removeAnimate(){
+        myPlace?.removeFromSuperview()
+        urPlace?.removeFromSuperview()
     }
     
-    func twinkleUnlocked(){
-        twinkling = false
-    }
 }

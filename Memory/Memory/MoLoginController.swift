@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-import Twinkle
 
 class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
     var blurView: FXBlurView?
+    var setUpView: MoSetUp?
     var infoView: MoInfo?
     
     var passwordInput = UITextField()
@@ -20,6 +20,8 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     var beginLoc: CGPoint = CGPoint()
     
     var loginRequest: Bool = false
+    var setUping:Bool = false
+    var mainPage:Bool = false
     
     var views: [UIView] = []
     var currentView = 0
@@ -37,8 +39,15 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     }
     
     func initView(){
+        if (FIRST_LOGIN){
+            setUpView = MoSetUp(frame: self.view.bounds)
+            setUpView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
+            self.view.addSubview(setUpView!)
+            views.append(setUpView!)
+        }
+        
         infoView = MoInfo(frame: self.view.bounds)
-        infoView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
+        infoView!.center = CGPointMake(self.view.frame.size.width * (CGFloat(2 * views.count + 1) / 2), self.view.frame.size.height / 2)
         self.view.addSubview(infoView!)
         views.append(infoView!)
     }
@@ -94,34 +103,43 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         var moveOrNot = moveJudge(self.beginLoc, end: endLoc)
         var loginRes = ""
         
-        if loginRequest && !LOGINED{
-            loginRes = login()
-            if loginRes == "fail"{
-                currentView = 0
+        if  moveOrNot == "left"{
+            if views[oldView] == blurView{
+                loginRes = login()
+                if loginRes == "fail"{
+                    currentView = 0
+                }
+            }else if views[oldView] == setUpView{
+                setUp()
             }
         }
         
         if (moveOrNot != "not move" && loginRes != "fail"){
             UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 self.views[self.oldView].center = CGPointMake(-1 * self.view.center.x, self.views[self.oldView].center.y)
-            }, completion: nil)
+                }, completion: nil)
         }
         
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.views[self.currentView].center = CGPointMake(self.view.center.x, self.views[self.currentView].center.y)
             }, completion: nil)
         
-        if (loginRes == "success"){
-            loginRes = "not use"
-            self.views.removeAtIndex(0)
-            oldView = 0
-            currentView = 0
+        if (moveOrNot != "not move"){
+            if (loginRes == "success"){
+                loginRes = "not use"
+                self.views.removeAtIndex(0)
+                oldView = 0
+                currentView = 0
+            }else if (setUping){
+                self.views.removeAtIndex(0)
+                oldView = 0
+                currentView = 0
+            }
         }
         
-        if (self.views[currentView] == infoView){
-            self.infoView?.beginTwinkle()
-        }else{
-            self.infoView?.twinkleUnlocked()
+        if (moveOrNot != "not move" && views[oldView] != blurView && views[currentView] != blurView){
+            (self.views[oldView] as! MoView).removeAnimate()
+            (self.views[currentView] as! MoView).beginAnimate()
         }
         
     }
@@ -138,9 +156,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             if currentView < self.views.count - 1{
                 oldView = currentView
                 currentView += 1
-                if (!loginRequest && currentView == 1 && !LOGINED){
-                    loginRequest = true
-                }
                 return "left"
             }
             else {return "not move"}
@@ -180,6 +195,10 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
                 return "success"
             }
         }
+    }
+    
+    func setUp(){
+        setUping = true
     }
 }
 
