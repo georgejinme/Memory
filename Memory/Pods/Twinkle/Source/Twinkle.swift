@@ -166,12 +166,11 @@ extension CGPoint {
 extension UIView {
 
     func twinkle() {
-        var twinkleLayers: [TwinkleLayer]! = []
+        var twinkleLayers: [TwinkleLayer] = []
         
         let upperBound: UInt32 = 10
         let lowerBound: UInt32 = 5
         let count: UInt = UInt(arc4random_uniform(upperBound) + lowerBound)
-        
         for i in 0..<count {
             let twinkleLayer: TwinkleLayer = TwinkleLayer()
             let x: Int = Int(arc4random_uniform(UInt32(self.layer.bounds.size.width)))

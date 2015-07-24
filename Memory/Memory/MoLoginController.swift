@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Twinkle
 
 class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
@@ -39,7 +40,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         infoView = MoInfo(frame: self.view.bounds)
         infoView!.center = CGPointMake(self.view.frame.size.width * 3 / 2, self.view.frame.size.height / 2)
         self.view.addSubview(infoView!)
-        
         views.append(infoView!)
     }
     
@@ -117,6 +117,11 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             oldView = 0
             currentView = 0
         }
+        
+        if (self.views[currentView] == infoView){
+            self.infoView?.beginTwinkle()
+        }
+        
     }
     
     func moveJudge(start: CGPoint, end: CGPoint) -> String{

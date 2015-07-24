@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE5E438ED408A981E4C9C72 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FFA391661B623DEA0044BB25 /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA391651B623DEA0044BB25 /* Twinkle.swift */; };
+		FFA391681B6242360044BB25 /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA391671B6242360044BB25 /* TwinkleImage.png */; };
 		FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */; };
 		FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF180211B5F4A7700C450DE /* Images.xcassets */; };
 		FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF180231B5F4A7700C450DE /* LaunchScreen.xib */; };
@@ -35,6 +37,8 @@
 		2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AE5E438ED408A981E4C9C72 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA391651B623DEA0044BB25 /* Twinkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Twinkle.swift; path = Pods/Twinkle/Source/Twinkle.swift; sourceTree = "<group>"; };
+		FFA391671B6242360044BB25 /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TwinkleImage.png; path = Pods/Twinkle/Source/Resources/TwinkleImage.png; sourceTree = "<group>"; };
 		FFF180151B5F4A7600C450DE /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF180191B5F4A7600C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		FFF180481B5F6C9A00C450DE /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				FFA391651B623DEA0044BB25 /* Twinkle.swift */,
+				FFA391671B6242360044BB25 /* TwinkleImage.png */,
 				FFF1804A1B5F6CAD00C450DE /* FXBlurView.h */,
 				FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */,
 				FFF180491B5F6CAC00C450DE /* Memory-Bridging-Header.h */,
@@ -279,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA391681B6242360044BB25 /* TwinkleImage.png in Resources */,
 				FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */,
 				FFF180401B5F5ED600C450DE /* Podfile in Resources */,
 				FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */,
@@ -352,6 +359,7 @@
 				FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */,
 				FFF180521B5F903500C450DE /* Constant.swift in Sources */,
 				FFF1805D1B5FF77200C450DE /* MoInfo.swift in Sources */,
+				FFA391661B623DEA0044BB25 /* Twinkle.swift in Sources */,
 				FFF1803E1B5F4F2E00C450DE /* MoLoginController.swift in Sources */,
 				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);

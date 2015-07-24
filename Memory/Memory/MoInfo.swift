@@ -34,7 +34,6 @@ class MoInfo:UIView{
         myPlace?.text = "I, ShangHai"
         myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         myPlace?.textColor = UIColor.whiteColor()
-        myPlace!.twinkle()
         urPlace?.text = "U, By my side"
         urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         urPlace?.textColor = UIColor.whiteColor()
@@ -43,5 +42,10 @@ class MoInfo:UIView{
         self.addSubview(myPlace!)
         self.addSubview(urPlace!)
         
+    }
+    
+    func beginTwinkle(){
+        myPlace?.twinkle()
+        urPlace?.twinkle()
     }
 }

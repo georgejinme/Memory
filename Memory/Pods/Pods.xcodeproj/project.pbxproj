@@ -7,338 +7,302 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0391C8F98B68E2D066EB9FD7 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A32283AB3079BD8A0B79BB /* Debugging.swift */; };
-		07A06A412658F8F48D086E3C /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D3ABE6357DAB1D4CFDC55 /* ConstraintRelation.swift */; };
-		0BD27E82239ED06E4267F1DA /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179C4FAE19026D8C428A14E /* LayoutConstraint.swift */; };
-		1C8553966EEA4D4663345389 /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E29A37ABBF2AB17A479368 /* Twinkle.swift */; };
-		1EE0FF979B8DDCE3C818DE50 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2FE6D46DEF5C843F66A84 /* ConstraintItem.swift */; };
-		33D39F4F2E3892E4C5B825D1 /* Pods-SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84FC7D6737800200F20AAC18 /* Pods-SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46F5D6EB7E7C75AC76CE0B66 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69EBF79BBF6D9B7F20894FE7 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		554AD4DCEB6EE56B9C2D9BC5 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A32FDE06ADD0346B04803F /* EdgeInsets.swift */; };
-		5AA7DE4C52B48EDFEC76B85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90B16533B1CB66E2729820 /* Foundation.framework */; };
-		6A4F02E2ACB120DFB6FB78B5 /* Pods-Twinkle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B316A9F7E7EC2B2733BFBD6 /* Pods-Twinkle-dummy.m */; };
-		6DA3DE6F44CC1392595D5267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90B16533B1CB66E2729820 /* Foundation.framework */; };
-		8B7025D0F922D1B5A13FEC70 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0065652485C047024B94071D /* Pods-dummy.m */; };
-		9450D8A71BC06B1D4DC0ACD5 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4CDB2A650C0C84296026B9 /* ConstraintMaker.swift */; };
-		9BCF6BF30FC7ED00D13B04DA /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863ECAD1E3CFCF0703C76E6E /* ConstraintAttributes.swift */; };
-		A93EAD6687F373704E1AECCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90B16533B1CB66E2729820 /* Foundation.framework */; };
-		BBA63B61B9C1DC5991099863 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DE6D46B87845167FC7F3 /* Constraint.swift */; };
-		C7D17E4E81DD2C5FC6A537B6 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1156E5BA209839EA5E2B0 /* ViewController+SnapKit.swift */; };
-		C8648F3E37AE26794885A225 /* Pods-Twinkle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0153283CDCACE5C59A20768 /* Pods-Twinkle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE50FE3272720E20BC08F904 /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 428EBF35DAB67D3791AE99E9 /* TwinkleImage.png */; };
-		D88913C4842560D0DE482003 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB1489D3D95F08B9053FD6 /* SnapKit.swift */; };
-		D93F66481807355B20D3A516 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F5F83E1DA3367C164E5FC5 /* ConstraintDescription.swift */; };
-		DF81E01F7AE40406A01919FE /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E072798B5934038EB7C6BFE /* View+SnapKit.swift */; };
-		F85950A228FDA85A2C3F1DAE /* Pods-SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E182509FB6152F43C08C48 /* Pods-SnapKit-dummy.m */; };
+		071D33585C293F1AEA3CBF1E /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CFE8F4708A0DD75B394D2 /* View+SnapKit.swift */; };
+		085D2C1335DF18B6AE7898AB /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25547BCB5B5C09DA8DEA3BE8 /* Constraint.swift */; };
+		093A34D0565C78EADE4F9CD5 /* Pods-SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60162A5C96E369FD797C8ACD /* Pods-SnapKit-dummy.m */; };
+		1BAD7DF740ECEC945A8FDF9B /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A903B89820C88174F5A2AC /* ConstraintDescription.swift */; };
+		203BDC3293D330B06EE1FA44 /* Pods-SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 188F34743A17C4AC99B23BED /* Pods-SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F50161C30296D4D505CFDA8 /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0139553CA26A4C9A9FEF1F88 /* TwinkleImage.png */; };
+		337B0EAF2591AE52C83D605F /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C22F19E11C8E3FAD88E7FB /* Twinkle.swift */; };
+		359A6625B7DD16D7011B2A21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD103523D07AC627DEA63FBA /* Foundation.framework */; };
+		557C358393F6C80E6F0F92C5 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB48408F5C0E1C01BD8E604 /* Pods-dummy.m */; };
+		55E4D8741B47289811839584 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D55D74698115CB3CAB5B33 /* ViewController+SnapKit.swift */; };
+		685B9F2584D989263FFF97BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD103523D07AC627DEA63FBA /* Foundation.framework */; };
+		7829E8894193E7AFE2C1E6A3 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8AC60E3A4B9E674076F851 /* EdgeInsets.swift */; };
+		97C1DCD0B7886F76A7932144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD103523D07AC627DEA63FBA /* Foundation.framework */; };
+		ACDFEEEA3D741C2BA47BDCFD /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13BE2270673261339B574D /* ConstraintRelation.swift */; };
+		AD00C867F8E0C55713C24022 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2432B07018C93A0AE7515D /* ConstraintItem.swift */; };
+		BE4C6A7CDADDC9039B9EABC7 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399503EE19ECE63B7CBB1E2 /* ConstraintAttributes.swift */; };
+		C6CCB28A54B2EA8F6B5B29CF /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D035C821166ABB19AA6400F7 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC5C333B84C846FEA857D69B /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D599856D4D71DB057C521C2 /* ConstraintMaker.swift */; };
+		E16455743E3974786056A6C4 /* Pods-Twinkle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF0A6F76AF4E02FA429BCE /* Pods-Twinkle-dummy.m */; };
+		E7F1B237D008C28C5728C476 /* Pods-Twinkle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F3DA66408C2DEACD97F6AA /* Pods-Twinkle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDF5209EC01F4EF33D2B33E7 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A858F7380DD41D91E434A27 /* SnapKit.swift */; };
+		F78187D3382A8687BC72107E /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FDA699C8FBE09C781F490 /* Debugging.swift */; };
+		FAAE6400C620E5E351FC7633 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88513F2076F6E22CC4E6D5D5 /* LayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A74C18183D295EC1A0FD377B /* PBXContainerItemProxy */ = {
+		7FBA800BC01306C67A4CA4EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D6D01F5E0D71058F641450D9 /* Project object */;
+			containerPortal = 9DB579875291AD4554D1B850 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 65161299C60093777EB156E6;
+			remoteGlobalIDString = F82912177597476F120104E4;
 			remoteInfo = "Pods-SnapKit";
 		};
-		CDE4B8914A39827B6CC23512 /* PBXContainerItemProxy */ = {
+		D9FCE201A4FAC5A1DD942216 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D6D01F5E0D71058F641450D9 /* Project object */;
+			containerPortal = 9DB579875291AD4554D1B850 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A2DAD60E47044044287FB4FA;
+			remoteGlobalIDString = 2DE846B0C2DE053F6EA88742;
 			remoteInfo = "Pods-Twinkle";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0065652485C047024B94071D /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		0B90B16533B1CB66E2729820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		13351E260488D19C5C763AD9 /* Pods-SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapKit.modulemap"; sourceTree = "<group>"; };
-		185744AE22412F391526AF55 /* Pods-Twinkle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twinkle.xcconfig"; sourceTree = "<group>"; };
-		1C8A5DD71199A696172058F5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		1CFE25629778B1BD50BC4D0B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		1D56DE6D46B87845167FC7F3 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		1F20F378B47561248358B88D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		227165202DBB0CE060D19D99 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2CC75641D24C1130B0EE8C85 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3179C4FAE19026D8C428A14E /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		34A32FDE06ADD0346B04803F /* EdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsets.swift; path = Source/EdgeInsets.swift; sourceTree = "<group>"; };
-		3601C411DB106C2A1694ABC0 /* Pods-SnapKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit-Private.xcconfig"; sourceTree = "<group>"; };
-		3973DB918EA47FF8B6A4042F /* Pods-Twinkle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Twinkle-prefix.pch"; sourceTree = "<group>"; };
-		3A1D70BD5BEC6B423C16DBEC /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		428EBF35DAB67D3791AE99E9 /* TwinkleImage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TwinkleImage.png; path = Source/Resources/TwinkleImage.png; sourceTree = "<group>"; };
-		4B316A9F7E7EC2B2733BFBD6 /* Pods-Twinkle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Twinkle-dummy.m"; sourceTree = "<group>"; };
-		53DE619DF4F248BA056E5E42 /* Pods-SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit.xcconfig"; sourceTree = "<group>"; };
-		5D4457E7CE0FC5B5DBF2CA84 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		5D8D3ABE6357DAB1D4CFDC55 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		6072AE719415ABDF1FB79C91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69EBF79BBF6D9B7F20894FE7 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		6A81E0ADF98BD5530D578476 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7135E7D48F1F20030CC36543 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76281D0191E5BCC6E34A77BB /* Pods-SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		7668B067724A420160DBFC7E /* Pods-Twinkle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twinkle-Private.xcconfig"; sourceTree = "<group>"; };
-		7A4CDB2A650C0C84296026B9 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		7B3B8E5A940FB280B6F63149 /* Pods-Twinkle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Twinkle.modulemap"; sourceTree = "<group>"; };
-		7CE1156E5BA209839EA5E2B0 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewController+SnapKit.swift"; path = "Source/ViewController+SnapKit.swift"; sourceTree = "<group>"; };
-		7E072798B5934038EB7C6BFE /* View+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+SnapKit.swift"; path = "Source/View+SnapKit.swift"; sourceTree = "<group>"; };
-		84FC7D6737800200F20AAC18 /* Pods-SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		863ECAD1E3CFCF0703C76E6E /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		87A32283AB3079BD8A0B79BB /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		8AF2FE6D46DEF5C843F66A84 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		8EC16ED690059F29CF39F7DF /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		9762EEDEF688F75D391F1B4D /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		9DCB1489D3D95F08B9053FD6 /* SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapKit.swift; path = Source/SnapKit.swift; sourceTree = "<group>"; };
-		A88936B44B032E76A17CEDB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0FFD64AB6678CC35698F929 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		C3E29A37ABBF2AB17A479368 /* Twinkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Twinkle.swift; path = Source/Twinkle.swift; sourceTree = "<group>"; };
-		D0DBB2D7F5CE644E32C5F9A5 /* Twinkle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Twinkle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8F5F83E1DA3367C164E5FC5 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		E5E182509FB6152F43C08C48 /* Pods-SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapKit-dummy.m"; sourceTree = "<group>"; };
-		F0153283CDCACE5C59A20768 /* Pods-Twinkle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Twinkle-umbrella.h"; sourceTree = "<group>"; };
+		0139553CA26A4C9A9FEF1F88 /* TwinkleImage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TwinkleImage.png; path = Source/Resources/TwinkleImage.png; sourceTree = "<group>"; };
+		0B2AE5330BBD1623A0FD523E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E7A80FBED4C096D28E0678A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0F8AC60E3A4B9E674076F851 /* EdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsets.swift; path = Source/EdgeInsets.swift; sourceTree = "<group>"; };
+		16D6FAE50303C38C98DA1D4C /* Pods-Twinkle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Twinkle.modulemap"; sourceTree = "<group>"; };
+		188F34743A17C4AC99B23BED /* Pods-SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		1922321E42519D0BE89DAE4D /* Pods-Twinkle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twinkle-Private.xcconfig"; sourceTree = "<group>"; };
+		1E561561502EC5FBCE645319 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		204D503E9036AB245E840B72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		25547BCB5B5C09DA8DEA3BE8 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		33D55D74698115CB3CAB5B33 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewController+SnapKit.swift"; path = "Source/ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		346FC4A1E972EE199ECF280A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E9469782144B572F7706131 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47880FA534547C2901E56D13 /* Pods-SnapKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit-Private.xcconfig"; sourceTree = "<group>"; };
+		4A858F7380DD41D91E434A27 /* SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapKit.swift; path = Source/SnapKit.swift; sourceTree = "<group>"; };
+		4A8DAAFB034B158F6AA5EDD4 /* Pods-SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		4F0E6D12B27D9A3B3052504C /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		54F4A07460FF16D9A643F46C /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		56A524F11E14E562F0B80BA9 /* Pods-Twinkle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twinkle.xcconfig"; sourceTree = "<group>"; };
+		60162A5C96E369FD797C8ACD /* Pods-SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapKit-dummy.m"; sourceTree = "<group>"; };
+		67153B993E942623E620710B /* Pods-SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit.xcconfig"; sourceTree = "<group>"; };
+		6F2432B07018C93A0AE7515D /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		7573870A9E60C069A1FF1212 /* Twinkle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Twinkle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79034B4C9D1D7FC8CCB10FC3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		7CB26C2636E967929BA14024 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DF1C1772DEB92A6E7ABE0C /* Pods-Twinkle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Twinkle-prefix.pch"; sourceTree = "<group>"; };
+		829CBFC3722EA857A71D7A83 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88513F2076F6E22CC4E6D5D5 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		8D599856D4D71DB057C521C2 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		9D13BE2270673261339B574D /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		A1F3DA66408C2DEACD97F6AA /* Pods-Twinkle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Twinkle-umbrella.h"; sourceTree = "<group>"; };
+		A399503EE19ECE63B7CBB1E2 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		AFAF0A6F76AF4E02FA429BCE /* Pods-Twinkle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Twinkle-dummy.m"; sourceTree = "<group>"; };
+		B15FDA699C8FBE09C781F490 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		CA41D1D6DF82FDF189F1A0CF /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB48408F5C0E1C01BD8E604 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		D035C821166ABB19AA6400F7 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		D9D47D307635C7A93D78622B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		E0C22F19E11C8E3FAD88E7FB /* Twinkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Twinkle.swift; path = Source/Twinkle.swift; sourceTree = "<group>"; };
+		EB8CFE8F4708A0DD75B394D2 /* View+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+SnapKit.swift"; path = "Source/View+SnapKit.swift"; sourceTree = "<group>"; };
+		EC7B98B5D2504A93D7D94534 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		F0A903B89820C88174F5A2AC /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		FB7344A88D97418B2922465C /* Pods-SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapKit.modulemap"; sourceTree = "<group>"; };
+		FD103523D07AC627DEA63FBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		240871551B608339CB83CD55 /* Frameworks */ = {
+		5F5E765A42A1EFCDA1008CB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93EAD6687F373704E1AECCA /* Foundation.framework in Frameworks */,
+				97C1DCD0B7886F76A7932144 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BB767306D14FF1CC93882B8 /* Frameworks */ = {
+		77BD70CAAB71FC9FC4865DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA7DE4C52B48EDFEC76B85E /* Foundation.framework in Frameworks */,
+				359A6625B7DD16D7011B2A21 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3DBEC61A56FCAC364262901 /* Frameworks */ = {
+		D4896186C51A225748D62A13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DA3DE6F44CC1392595D5267 /* Foundation.framework in Frameworks */,
+				685B9F2584D989263FFF97BC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13877FB19185647C54FAC70F /* Pods */ = {
+		09BBCACDF965B99DDDFFED5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6072AE719415ABDF1FB79C91 /* Info.plist */,
-				8EC16ED690059F29CF39F7DF /* Pods.modulemap */,
-				2CC75641D24C1130B0EE8C85 /* Pods-acknowledgements.markdown */,
-				C0FFD64AB6678CC35698F929 /* Pods-acknowledgements.plist */,
-				0065652485C047024B94071D /* Pods-dummy.m */,
-				5D4457E7CE0FC5B5DBF2CA84 /* Pods-environment.h */,
-				3A1D70BD5BEC6B423C16DBEC /* Pods-frameworks.sh */,
-				9762EEDEF688F75D391F1B4D /* Pods-resources.sh */,
-				69EBF79BBF6D9B7F20894FE7 /* Pods-umbrella.h */,
-				1CFE25629778B1BD50BC4D0B /* Pods.debug.xcconfig */,
-				1C8A5DD71199A696172058F5 /* Pods.release.xcconfig */,
+				15C92A1743AB2A802218C23F /* SnapKit */,
+				A82E9BFC479ABA5CB1748BA8 /* Twinkle */,
 			);
 			name = Pods;
-			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		27C0F12C672F6C930CBED721 /* Support Files */ = {
+		15C92A1743AB2A802218C23F /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
-				A88936B44B032E76A17CEDB0 /* Info.plist */,
-				13351E260488D19C5C763AD9 /* Pods-SnapKit.modulemap */,
-				53DE619DF4F248BA056E5E42 /* Pods-SnapKit.xcconfig */,
-				3601C411DB106C2A1694ABC0 /* Pods-SnapKit-Private.xcconfig */,
-				E5E182509FB6152F43C08C48 /* Pods-SnapKit-dummy.m */,
-				76281D0191E5BCC6E34A77BB /* Pods-SnapKit-prefix.pch */,
-				84FC7D6737800200F20AAC18 /* Pods-SnapKit-umbrella.h */,
+				25547BCB5B5C09DA8DEA3BE8 /* Constraint.swift */,
+				A399503EE19ECE63B7CBB1E2 /* ConstraintAttributes.swift */,
+				F0A903B89820C88174F5A2AC /* ConstraintDescription.swift */,
+				6F2432B07018C93A0AE7515D /* ConstraintItem.swift */,
+				8D599856D4D71DB057C521C2 /* ConstraintMaker.swift */,
+				9D13BE2270673261339B574D /* ConstraintRelation.swift */,
+				B15FDA699C8FBE09C781F490 /* Debugging.swift */,
+				0F8AC60E3A4B9E674076F851 /* EdgeInsets.swift */,
+				88513F2076F6E22CC4E6D5D5 /* LayoutConstraint.swift */,
+				4A858F7380DD41D91E434A27 /* SnapKit.swift */,
+				EB8CFE8F4708A0DD75B394D2 /* View+SnapKit.swift */,
+				33D55D74698115CB3CAB5B33 /* ViewController+SnapKit.swift */,
+				71780423A32A5B8F86B37FA4 /* Support Files */,
+			);
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		37109D178B0E0169D9D5579E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				829CBFC3722EA857A71D7A83 /* Pods.framework */,
+				CA41D1D6DF82FDF189F1A0CF /* SnapKit.framework */,
+				7573870A9E60C069A1FF1212 /* Twinkle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		432FDB9CCE5CD8AF8D7035F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0139553CA26A4C9A9FEF1F88 /* TwinkleImage.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71780423A32A5B8F86B37FA4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CB26C2636E967929BA14024 /* Info.plist */,
+				FB7344A88D97418B2922465C /* Pods-SnapKit.modulemap */,
+				67153B993E942623E620710B /* Pods-SnapKit.xcconfig */,
+				47880FA534547C2901E56D13 /* Pods-SnapKit-Private.xcconfig */,
+				60162A5C96E369FD797C8ACD /* Pods-SnapKit-dummy.m */,
+				4A8DAAFB034B158F6AA5EDD4 /* Pods-SnapKit-prefix.pch */,
+				188F34743A17C4AC99B23BED /* Pods-SnapKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-SnapKit";
 			sourceTree = "<group>";
 		};
-		309E4F8D0180179CB755C3FE /* Resources */ = {
+		786B65685ACCD38C3A51A94F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				428EBF35DAB67D3791AE99E9 /* TwinkleImage.png */,
+				0B2AE5330BBD1623A0FD523E /* Info.plist */,
+				EC7B98B5D2504A93D7D94534 /* Pods.modulemap */,
+				3E9469782144B572F7706131 /* Pods-acknowledgements.markdown */,
+				1E561561502EC5FBCE645319 /* Pods-acknowledgements.plist */,
+				CFB48408F5C0E1C01BD8E604 /* Pods-dummy.m */,
+				4F0E6D12B27D9A3B3052504C /* Pods-environment.h */,
+				79034B4C9D1D7FC8CCB10FC3 /* Pods-frameworks.sh */,
+				54F4A07460FF16D9A643F46C /* Pods-resources.sh */,
+				D035C821166ABB19AA6400F7 /* Pods-umbrella.h */,
+				D9D47D307635C7A93D78622B /* Pods.debug.xcconfig */,
+				204D503E9036AB245E840B72 /* Pods.release.xcconfig */,
 			);
-			name = Resources;
+			name = Pods;
+			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		336428E5096E4BA75646F16B /* Twinkle */ = {
+		A184E2950C44C32866A5B40A = {
 			isa = PBXGroup;
 			children = (
-				C3E29A37ABBF2AB17A479368 /* Twinkle.swift */,
-				309E4F8D0180179CB755C3FE /* Resources */,
-				C04B03600B592EE5865ADD0A /* Support Files */,
+				0E7A80FBED4C096D28E0678A /* Podfile */,
+				FE74CEE4FA15B4334695E55A /* Frameworks */,
+				09BBCACDF965B99DDDFFED5C /* Pods */,
+				37109D178B0E0169D9D5579E /* Products */,
+				E346D6DF3EB4E0A1185047EF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A82E9BFC479ABA5CB1748BA8 /* Twinkle */ = {
+			isa = PBXGroup;
+			children = (
+				E0C22F19E11C8E3FAD88E7FB /* Twinkle.swift */,
+				432FDB9CCE5CD8AF8D7035F6 /* Resources */,
+				A9353BBF12E38D9E1208419E /* Support Files */,
 			);
 			path = Twinkle;
 			sourceTree = "<group>";
 		};
-		58015B8CF5E7BEA7F739B312 /* Targets Support Files */ = {
+		A9353BBF12E38D9E1208419E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				13877FB19185647C54FAC70F /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6268774DAB933152D0ADF121 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D71B96FF838C2FFF5643F4FB /* SnapKit */,
-				336428E5096E4BA75646F16B /* Twinkle */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		68982885E668FA740801C502 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DCCDED1BB84F14EFEE369706 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		744FB7B6F8CB80B6300B158E = {
-			isa = PBXGroup;
-			children = (
-				227165202DBB0CE060D19D99 /* Podfile */,
-				68982885E668FA740801C502 /* Frameworks */,
-				6268774DAB933152D0ADF121 /* Pods */,
-				EEF7E258687C7135975BDE2A /* Products */,
-				58015B8CF5E7BEA7F739B312 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		C04B03600B592EE5865ADD0A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1F20F378B47561248358B88D /* Info.plist */,
-				7B3B8E5A940FB280B6F63149 /* Pods-Twinkle.modulemap */,
-				185744AE22412F391526AF55 /* Pods-Twinkle.xcconfig */,
-				7668B067724A420160DBFC7E /* Pods-Twinkle-Private.xcconfig */,
-				4B316A9F7E7EC2B2733BFBD6 /* Pods-Twinkle-dummy.m */,
-				3973DB918EA47FF8B6A4042F /* Pods-Twinkle-prefix.pch */,
-				F0153283CDCACE5C59A20768 /* Pods-Twinkle-umbrella.h */,
+				346FC4A1E972EE199ECF280A /* Info.plist */,
+				16D6FAE50303C38C98DA1D4C /* Pods-Twinkle.modulemap */,
+				56A524F11E14E562F0B80BA9 /* Pods-Twinkle.xcconfig */,
+				1922321E42519D0BE89DAE4D /* Pods-Twinkle-Private.xcconfig */,
+				AFAF0A6F76AF4E02FA429BCE /* Pods-Twinkle-dummy.m */,
+				80DF1C1772DEB92A6E7ABE0C /* Pods-Twinkle-prefix.pch */,
+				A1F3DA66408C2DEACD97F6AA /* Pods-Twinkle-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Twinkle";
 			sourceTree = "<group>";
 		};
-		D71B96FF838C2FFF5643F4FB /* SnapKit */ = {
+		AEB22F542566F5442DC9AC5D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1D56DE6D46B87845167FC7F3 /* Constraint.swift */,
-				863ECAD1E3CFCF0703C76E6E /* ConstraintAttributes.swift */,
-				D8F5F83E1DA3367C164E5FC5 /* ConstraintDescription.swift */,
-				8AF2FE6D46DEF5C843F66A84 /* ConstraintItem.swift */,
-				7A4CDB2A650C0C84296026B9 /* ConstraintMaker.swift */,
-				5D8D3ABE6357DAB1D4CFDC55 /* ConstraintRelation.swift */,
-				87A32283AB3079BD8A0B79BB /* Debugging.swift */,
-				34A32FDE06ADD0346B04803F /* EdgeInsets.swift */,
-				3179C4FAE19026D8C428A14E /* LayoutConstraint.swift */,
-				9DCB1489D3D95F08B9053FD6 /* SnapKit.swift */,
-				7E072798B5934038EB7C6BFE /* View+SnapKit.swift */,
-				7CE1156E5BA209839EA5E2B0 /* ViewController+SnapKit.swift */,
-				27C0F12C672F6C930CBED721 /* Support Files */,
-			);
-			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		DCCDED1BB84F14EFEE369706 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				0B90B16533B1CB66E2729820 /* Foundation.framework */,
+				FD103523D07AC627DEA63FBA /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EEF7E258687C7135975BDE2A /* Products */ = {
+		E346D6DF3EB4E0A1185047EF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7135E7D48F1F20030CC36543 /* Pods.framework */,
-				6A81E0ADF98BD5530D578476 /* SnapKit.framework */,
-				D0DBB2D7F5CE644E32C5F9A5 /* Twinkle.framework */,
+				786B65685ACCD38C3A51A94F /* Pods */,
 			);
-			name = Products;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FE74CEE4FA15B4334695E55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB22F542566F5442DC9AC5D /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1199E1CAF30E1A80A3AF1F1A /* Headers */ = {
+		6211A9A15A130F095655AE02 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D39F4F2E3892E4C5B825D1 /* Pods-SnapKit-umbrella.h in Headers */,
+				C6CCB28A54B2EA8F6B5B29CF /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6646806E85041F0E15AC88B3 /* Headers */ = {
+		C5BA9AB9F5607105CE214DD8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8648F3E37AE26794885A225 /* Pods-Twinkle-umbrella.h in Headers */,
+				203BDC3293D330B06EE1FA44 /* Pods-SnapKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EF61E532056702A5C9B156A /* Headers */ = {
+		C95068334B1B2A6A14DC1611 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F5D6EB7E7C75AC76CE0B66 /* Pods-umbrella.h in Headers */,
+				E7F1B237D008C28C5728C476 /* Pods-Twinkle-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A5B474F3805590C05181D53 /* Pods */ = {
+		2DE846B0C2DE053F6EA88742 /* Pods-Twinkle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8AA90CB809E436A309E6C09 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 8DEB033C8A1E53300F82C135 /* Build configuration list for PBXNativeTarget "Pods-Twinkle" */;
 			buildPhases = (
-				1359420609CDFD8D54714D99 /* Sources */,
-				240871551B608339CB83CD55 /* Frameworks */,
-				6EF61E532056702A5C9B156A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EF1771E7EBA3BE526A51EF3C /* PBXTargetDependency */,
-				114F74201BCE7EDE1A8FE207 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 7135E7D48F1F20030CC36543 /* Pods.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		65161299C60093777EB156E6 /* Pods-SnapKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88C8F0B2A392933E373991D2 /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */;
-			buildPhases = (
-				DEFE7DB70F27F302C5D7ECDC /* Sources */,
-				E3DBEC61A56FCAC364262901 /* Frameworks */,
-				1199E1CAF30E1A80A3AF1F1A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-SnapKit";
-			productName = "Pods-SnapKit";
-			productReference = 6A81E0ADF98BD5530D578476 /* SnapKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A2DAD60E47044044287FB4FA /* Pods-Twinkle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F39956C45825F862F46D633D /* Build configuration list for PBXNativeTarget "Pods-Twinkle" */;
-			buildPhases = (
-				37AE986D0267CAD9BFC57B33 /* Sources */,
-				2BB767306D14FF1CC93882B8 /* Frameworks */,
-				B26F59F51E3B03DCA2B8F76A /* Resources */,
-				6646806E85041F0E15AC88B3 /* Headers */,
+				218090AA36AA36C2F6F82783 /* Sources */,
+				D4896186C51A225748D62A13 /* Frameworks */,
+				8FB87B3FEB29FDA686C362C7 /* Resources */,
+				C95068334B1B2A6A14DC1611 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -346,188 +310,142 @@
 			);
 			name = "Pods-Twinkle";
 			productName = "Pods-Twinkle";
-			productReference = D0DBB2D7F5CE644E32C5F9A5 /* Twinkle.framework */;
+			productReference = 7573870A9E60C069A1FF1212 /* Twinkle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B6A6C1FA5D14D70EF0B75555 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6E62D7E77AC71F64E943AD /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				891300C8ED114D8423DCB491 /* Sources */,
+				77BD70CAAB71FC9FC4865DD4 /* Frameworks */,
+				6211A9A15A130F095655AE02 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F58C19F3CA5357A7EE99C87 /* PBXTargetDependency */,
+				F94BE2C283CD537F48A5A7AD /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 829CBFC3722EA857A71D7A83 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F82912177597476F120104E4 /* Pods-SnapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936ECCE8E93714E53522F65C /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */;
+			buildPhases = (
+				DB71470BBCF80225A95F835A /* Sources */,
+				5F5E765A42A1EFCDA1008CB9 /* Frameworks */,
+				C5BA9AB9F5607105CE214DD8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SnapKit";
+			productName = "Pods-SnapKit";
+			productReference = CA41D1D6DF82FDF189F1A0CF /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D6D01F5E0D71058F641450D9 /* Project object */ = {
+		9DB579875291AD4554D1B850 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 2F84949E9CFB47817FDC5008 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 8B605E840692CF468452766D /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 744FB7B6F8CB80B6300B158E;
-			productRefGroup = EEF7E258687C7135975BDE2A /* Products */;
+			mainGroup = A184E2950C44C32866A5B40A;
+			productRefGroup = 37109D178B0E0169D9D5579E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A5B474F3805590C05181D53 /* Pods */,
-				65161299C60093777EB156E6 /* Pods-SnapKit */,
-				A2DAD60E47044044287FB4FA /* Pods-Twinkle */,
+				B6A6C1FA5D14D70EF0B75555 /* Pods */,
+				F82912177597476F120104E4 /* Pods-SnapKit */,
+				2DE846B0C2DE053F6EA88742 /* Pods-Twinkle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B26F59F51E3B03DCA2B8F76A /* Resources */ = {
+		8FB87B3FEB29FDA686C362C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE50FE3272720E20BC08F904 /* TwinkleImage.png in Resources */,
+				2F50161C30296D4D505CFDA8 /* TwinkleImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1359420609CDFD8D54714D99 /* Sources */ = {
+		218090AA36AA36C2F6F82783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B7025D0F922D1B5A13FEC70 /* Pods-dummy.m in Sources */,
+				E16455743E3974786056A6C4 /* Pods-Twinkle-dummy.m in Sources */,
+				337B0EAF2591AE52C83D605F /* Twinkle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37AE986D0267CAD9BFC57B33 /* Sources */ = {
+		891300C8ED114D8423DCB491 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A4F02E2ACB120DFB6FB78B5 /* Pods-Twinkle-dummy.m in Sources */,
-				1C8553966EEA4D4663345389 /* Twinkle.swift in Sources */,
+				557C358393F6C80E6F0F92C5 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEFE7DB70F27F302C5D7ECDC /* Sources */ = {
+		DB71470BBCF80225A95F835A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA63B61B9C1DC5991099863 /* Constraint.swift in Sources */,
-				9BCF6BF30FC7ED00D13B04DA /* ConstraintAttributes.swift in Sources */,
-				D93F66481807355B20D3A516 /* ConstraintDescription.swift in Sources */,
-				1EE0FF979B8DDCE3C818DE50 /* ConstraintItem.swift in Sources */,
-				9450D8A71BC06B1D4DC0ACD5 /* ConstraintMaker.swift in Sources */,
-				07A06A412658F8F48D086E3C /* ConstraintRelation.swift in Sources */,
-				0391C8F98B68E2D066EB9FD7 /* Debugging.swift in Sources */,
-				554AD4DCEB6EE56B9C2D9BC5 /* EdgeInsets.swift in Sources */,
-				0BD27E82239ED06E4267F1DA /* LayoutConstraint.swift in Sources */,
-				F85950A228FDA85A2C3F1DAE /* Pods-SnapKit-dummy.m in Sources */,
-				D88913C4842560D0DE482003 /* SnapKit.swift in Sources */,
-				DF81E01F7AE40406A01919FE /* View+SnapKit.swift in Sources */,
-				C7D17E4E81DD2C5FC6A537B6 /* ViewController+SnapKit.swift in Sources */,
+				085D2C1335DF18B6AE7898AB /* Constraint.swift in Sources */,
+				BE4C6A7CDADDC9039B9EABC7 /* ConstraintAttributes.swift in Sources */,
+				1BAD7DF740ECEC945A8FDF9B /* ConstraintDescription.swift in Sources */,
+				AD00C867F8E0C55713C24022 /* ConstraintItem.swift in Sources */,
+				CC5C333B84C846FEA857D69B /* ConstraintMaker.swift in Sources */,
+				ACDFEEEA3D741C2BA47BDCFD /* ConstraintRelation.swift in Sources */,
+				F78187D3382A8687BC72107E /* Debugging.swift in Sources */,
+				7829E8894193E7AFE2C1E6A3 /* EdgeInsets.swift in Sources */,
+				FAAE6400C620E5E351FC7633 /* LayoutConstraint.swift in Sources */,
+				093A34D0565C78EADE4F9CD5 /* Pods-SnapKit-dummy.m in Sources */,
+				EDF5209EC01F4EF33D2B33E7 /* SnapKit.swift in Sources */,
+				071D33585C293F1AEA3CBF1E /* View+SnapKit.swift in Sources */,
+				55E4D8741B47289811839584 /* ViewController+SnapKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		114F74201BCE7EDE1A8FE207 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Twinkle";
-			target = A2DAD60E47044044287FB4FA /* Pods-Twinkle */;
-			targetProxy = CDE4B8914A39827B6CC23512 /* PBXContainerItemProxy */;
-		};
-		EF1771E7EBA3BE526A51EF3C /* PBXTargetDependency */ = {
+		1F58C19F3CA5357A7EE99C87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SnapKit";
-			target = 65161299C60093777EB156E6 /* Pods-SnapKit */;
-			targetProxy = A74C18183D295EC1A0FD377B /* PBXContainerItemProxy */;
+			target = F82912177597476F120104E4 /* Pods-SnapKit */;
+			targetProxy = 7FBA800BC01306C67A4CA4EE /* PBXContainerItemProxy */;
+		};
+		F94BE2C283CD537F48A5A7AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Twinkle";
+			target = 2DE846B0C2DE053F6EA88742 /* Pods-Twinkle */;
+			targetProxy = D9FCE201A4FAC5A1DD942216 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05A19ADA803C25AF6CCF7955 /* Release */ = {
+		1FFA091C28CDB61D8DC71BA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3601C411DB106C2A1694ABC0 /* Pods-SnapKit-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SnapKit/Pods-SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapKit/Pods-SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		304D89F4E600C0A691F011C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7668B067724A420160DBFC7E /* Pods-Twinkle-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Twinkle/Pods-Twinkle-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Twinkle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Twinkle/Pods-Twinkle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Twinkle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		356BE4582B8413845342AFD0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7668B067724A420160DBFC7E /* Pods-Twinkle-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Twinkle/Pods-Twinkle-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Twinkle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Twinkle/Pods-Twinkle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Twinkle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3C0F6035913B52E1755396A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3601C411DB106C2A1694ABC0 /* Pods-SnapKit-Private.xcconfig */;
+			baseConfigurationReference = 47880FA534547C2901E56D13 /* Pods-SnapKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -553,7 +471,64 @@
 			};
 			name = Debug;
 		};
-		3DA532EA0BA4FD6F1B43E8E2 /* Release */ = {
+		3B5A10D6763FC67A98AF10E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204D503E9036AB245E840B72 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43DC8075D957D5F0C7027B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1922321E42519D0BE89DAE4D /* Pods-Twinkle-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Twinkle/Pods-Twinkle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Twinkle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Twinkle/Pods-Twinkle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F699964508D3B19E015ACD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -587,9 +562,9 @@
 			};
 			name = Release;
 		};
-		55C429E8B74809B6A34C304B /* Release */ = {
+		B11DFDE51FE82AAC0BE454B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C8A5DD71199A696172058F5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = D9D47D307635C7A93D78622B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -603,11 +578,39 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B905E11D40A0A741DBB20C6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1922321E42519D0BE89DAE4D /* Pods-Twinkle-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Twinkle/Pods-Twinkle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Twinkle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Twinkle/Pods-Twinkle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Twinkle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,7 +619,7 @@
 			};
 			name = Release;
 		};
-		9B83DF745C4C817547065C3D /* Debug */ = {
+		D362E37B3A52FA693634168A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -655,9 +658,9 @@
 			};
 			name = Debug;
 		};
-		D4FC00B81778851EF6FFC759 /* Debug */ = {
+		DC062C5B2BE16A092083EA41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CFE25629778B1BD50BC4D0B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 47880FA534547C2901E56D13 /* Pods-SnapKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -666,65 +669,62 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SnapKit/Pods-SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapKit/Pods-SnapKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F84949E9CFB47817FDC5008 /* Build configuration list for PBXProject "Pods" */ = {
+		8B605E840692CF468452766D /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B83DF745C4C817547065C3D /* Debug */,
-				3DA532EA0BA4FD6F1B43E8E2 /* Release */,
+				D362E37B3A52FA693634168A /* Debug */,
+				8F699964508D3B19E015ACD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88C8F0B2A392933E373991D2 /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */ = {
+		8DEB033C8A1E53300F82C135 /* Build configuration list for PBXNativeTarget "Pods-Twinkle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C0F6035913B52E1755396A7 /* Debug */,
-				05A19ADA803C25AF6CCF7955 /* Release */,
+				43DC8075D957D5F0C7027B59 /* Debug */,
+				B905E11D40A0A741DBB20C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8AA90CB809E436A309E6C09 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		936ECCE8E93714E53522F65C /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4FC00B81778851EF6FFC759 /* Debug */,
-				55C429E8B74809B6A34C304B /* Release */,
+				1FFA091C28CDB61D8DC71BA8 /* Debug */,
+				DC062C5B2BE16A092083EA41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F39956C45825F862F46D633D /* Build configuration list for PBXNativeTarget "Pods-Twinkle" */ = {
+		EE6E62D7E77AC71F64E943AD /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				356BE4582B8413845342AFD0 /* Debug */,
-				304D89F4E600C0A691F011C9 /* Release */,
+				B11DFDE51FE82AAC0BE454B1 /* Debug */,
+				3B5A10D6763FC67A98AF10E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D6D01F5E0D71058F641450D9 /* Project object */;
+	rootObject = 9DB579875291AD4554D1B850 /* Project object */;
 }

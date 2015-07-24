@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2DAD60E47044044287FB4FA"
+               BlueprintIdentifier = "2DE846B0C2DE053F6EA88742"
                BuildableName = "Twinkle.framework"
                BlueprintName = "Pods-Twinkle"
                ReferencedContainer = "container:Pods.xcodeproj">
