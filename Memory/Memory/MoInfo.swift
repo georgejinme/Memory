@@ -31,11 +31,8 @@ class MoInfo:MoView{
         myPlace?.center = CGPointMake(self.frame.size.width / 2, 50)
         urPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         urPlace?.center = CGPointMake(self.frame.size.width / 2, 125)
-        
-        myPlace?.text = "I, ShangHai"
         myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         myPlace?.textColor = UIColor.whiteColor()
-        urPlace?.text = "U, By my side"
         urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         urPlace?.textColor = UIColor.whiteColor()
         urPlace?.textAlignment = NSTextAlignment.Right
@@ -43,10 +40,12 @@ class MoInfo:MoView{
     
     override func beginAnimate(){
         self.addSubview(myPlace!)
+        myPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("myplace") as? String
         myPlace?.animation = "fadeInLeft"
         myPlace?.curve = "easeIn"
         myPlace?.duration = 2.4
         myPlace?.animateNext({
+            self.urPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("urplace") as? String
             self.addSubview(self.urPlace!)
             self.urPlace?.animation = "fadeInRight"
             self.urPlace?.curve = "easeIn"

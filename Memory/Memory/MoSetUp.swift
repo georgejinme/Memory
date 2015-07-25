@@ -24,10 +24,8 @@ func initSetUpView(view: UIView) -> FXBlurView{
 func initMyPlace(setUpBlurView: FXBlurView, text: String){
     myPlaceSetUp.backgroundColor = UIColor.clearColor()
     myPlaceSetUp.borderStyle = UITextBorderStyle.None
-    myPlaceSetUp.delegate = MoLoginController()
     myPlaceSetUp.textAlignment = NSTextAlignment.Center
     myPlaceSetUp.placeholder = text
-    myPlaceSetUp.secureTextEntry = true
     myPlaceSetUp.clearButtonMode = UITextFieldViewMode.WhileEditing
     myPlaceSetUp.returnKeyType = UIReturnKeyType.Done
     myPlaceSetUp.font = UIFont.systemFontOfSize(14)
@@ -38,10 +36,8 @@ func initMyPlace(setUpBlurView: FXBlurView, text: String){
 func initUrPlace(setUpBlurView: FXBlurView, text: String){
     urPlaceSetUp.backgroundColor = UIColor.clearColor()
     urPlaceSetUp.borderStyle = UITextBorderStyle.None
-    urPlaceSetUp.delegate = MoLoginController()
     urPlaceSetUp.textAlignment = NSTextAlignment.Center
     urPlaceSetUp.placeholder = text
-    urPlaceSetUp.secureTextEntry = true
     urPlaceSetUp.clearButtonMode = UITextFieldViewMode.WhileEditing
     urPlaceSetUp.returnKeyType = UIReturnKeyType.Done
     urPlaceSetUp.font = UIFont.systemFontOfSize(14)
@@ -50,14 +46,11 @@ func initUrPlace(setUpBlurView: FXBlurView, text: String){
 }
 
 
-
 func initMemoryTime(setUpBlurView: FXBlurView, text: String){
     timeSetUp.backgroundColor = UIColor.clearColor()
     timeSetUp.borderStyle = UITextBorderStyle.None
-    timeSetUp.delegate = MoLoginController()
     timeSetUp.textAlignment = NSTextAlignment.Center
     timeSetUp.placeholder = text
-    timeSetUp.secureTextEntry = true
     timeSetUp.clearButtonMode = UITextFieldViewMode.WhileEditing
     timeSetUp.returnKeyType = UIReturnKeyType.Done
     timeSetUp.font = UIFont.systemFontOfSize(14)

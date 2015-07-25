@@ -45,6 +45,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             loginPlaceHolder = "Please Input Your Password. Left Swipe to Login"
         }
         initInputPassword(loginBlurView!, loginPlaceHolder)
+        passwordInput.delegate = self
         
         if (FIRST_LOGIN){
             setUpBlurView = initSetUpView(self.view)
@@ -53,6 +54,9 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             initMyPlace(setUpBlurView!, "Where am I?")
             initUrPlace(setUpBlurView!, "Where are you?")
             initMemoryTime(setUpBlurView!, "When did your memory begin?")
+            myPlaceSetUp.delegate = self
+            urPlaceSetUp.delegate = self
+            timeSetUp.delegate = self
         }
         
         infoView = MoInfo(frame: self.view.bounds)
@@ -65,6 +69,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         passwordInput.resignFirstResponder()
         myPlaceSetUp.resignFirstResponder()
         urPlaceSetUp.resignFirstResponder()
+        timeSetUp.resignFirstResponder()
         var touch:UITouch = (touches as NSSet).anyObject() as! UITouch
         self.beginLoc = touch.locationInView(self.view)
     }
@@ -147,9 +152,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        passwordInput.resignFirstResponder()
-        myPlaceSetUp.resignFirstResponder()
-        urPlaceSetUp.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
@@ -181,8 +184,12 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     }
     
     func setUp(){
+        var store = NSUserDefaults.standardUserDefaults()
+        store.setObject(urPlaceSetUp.text, forKey: "urplace")
+        store.setObject(myPlaceSetUp.text, forKey: "myplace")
+        store.setObject(timeSetUp.text, forKey: "memoryBeginTime")
         setUping = true
-        
+        println("set up done!")
     }
 }
 
