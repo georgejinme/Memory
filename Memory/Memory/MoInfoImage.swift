@@ -19,6 +19,9 @@ class MoInfoImage: SpringView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.animation = "fadeIn"
+        self.duration = 2.5
+        self.curve = "easeIn"
         initPersonImage()
     }
     

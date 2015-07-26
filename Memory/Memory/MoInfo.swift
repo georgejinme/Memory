@@ -30,7 +30,6 @@ class MoInfo:MoView{
     
     func initPhoto(){
         personPhoto = MoInfoImage(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.width))
-        self.addSubview(personPhoto!)
     }
     
     func initPlaceLabel(){
@@ -46,18 +45,21 @@ class MoInfo:MoView{
     }
     
     override func beginAnimate(){
-        self.addSubview(myPlace!)
-        myPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("myplace") as? String
-        myPlace?.animation = "fadeInLeft"
-        myPlace?.curve = "easeIn"
-        myPlace?.duration = 2.4
-        myPlace?.animateNext({
-            self.urPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("urplace") as? String
-            self.addSubview(self.urPlace!)
-            self.urPlace?.animation = "fadeInRight"
-            self.urPlace?.curve = "easeIn"
-            self.urPlace?.duration = 2.4
-            self.urPlace?.animate()
+        self.addSubview(personPhoto!)
+        personPhoto?.animateNext({
+            self.addSubview(self.myPlace!)
+            self.myPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("myplace") as? String
+            self.myPlace?.animation = "fadeInLeft"
+            self.myPlace?.curve = "easeIn"
+            self.myPlace?.duration = 2.4
+            self.myPlace?.animateNext({
+                self.urPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("urplace") as? String
+                self.addSubview(self.urPlace!)
+                self.urPlace?.animation = "fadeInRight"
+                self.urPlace?.curve = "easeIn"
+                self.urPlace?.duration = 2.4
+                self.urPlace?.animate()
+            })
         })
     }
     
