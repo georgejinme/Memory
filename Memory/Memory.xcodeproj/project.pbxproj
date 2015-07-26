@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE5E438ED408A981E4C9C72 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FF26F1121B6524F1002A8428 /* MoInfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26F1111B6524F1002A8428 /* MoInfoImage.swift */; };
 		FF49956B1B6274FA009D694A /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FF49956A1B6274FA009D694A /* TwinkleImage.png */; };
 		FF49956D1B627500009D694A /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF49956C1B627500009D694A /* Twinkle.swift */; };
 		FF4995721B629E67009D694A /* MoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4995711B629E67009D694A /* MoView.swift */; };
@@ -40,6 +41,7 @@
 		2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AE5E438ED408A981E4C9C72 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF26F1111B6524F1002A8428 /* MoInfoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoInfoImage.swift; sourceTree = "<group>"; };
 		FF49956A1B6274FA009D694A /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinkleImage.png; sourceTree = "<group>"; };
 		FF49956C1B627500009D694A /* Twinkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twinkle.swift; sourceTree = "<group>"; };
 		FF4995711B629E67009D694A /* MoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,31 @@
 				37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF26F10E1B652401002A8428 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				FFF1805C1B5FF77200C450DE /* MoInfo.swift */,
+				FF26F1111B6524F1002A8428 /* MoInfoImage.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		FF26F10F1B65240C002A8428 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FF4995731B62AAEC009D694A /* MoLogin.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		FF26F1101B652417002A8428 /* SetUp */ = {
+			isa = PBXGroup;
+			children = (
+				FF4995751B62ABD4009D694A /* MoSetUp.swift */,
+			);
+			name = SetUp;
 			sourceTree = "<group>";
 		};
 		FFF1800C1B5F4A7600C450DE = {
@@ -203,9 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				FF4995711B629E67009D694A /* MoView.swift */,
-				FFF1805C1B5FF77200C450DE /* MoInfo.swift */,
-				FF4995731B62AAEC009D694A /* MoLogin.swift */,
-				FF4995751B62ABD4009D694A /* MoSetUp.swift */,
+				FF26F1101B652417002A8428 /* SetUp */,
+				FF26F10F1B65240C002A8428 /* Login */,
+				FF26F10E1B652401002A8428 /* Info */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -373,6 +400,7 @@
 				FFF1805D1B5FF77200C450DE /* MoInfo.swift in Sources */,
 				FFF1803E1B5F4F2E00C450DE /* MoLoginController.swift in Sources */,
 				FF49956D1B627500009D694A /* Twinkle.swift in Sources */,
+				FF26F1121B6524F1002A8428 /* MoInfoImage.swift in Sources */,
 				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,12 +13,14 @@ import Spring
 
 class MoInfo:MoView{
     
+    var personPhoto: MoInfoImage?
     var myPlace: SpringLabel?
     var urPlace: SpringLabel?
-    var twinkling: Bool = false
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initPhoto()
         initPlaceLabel()
     }
 
@@ -26,11 +28,16 @@ class MoInfo:MoView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func initPhoto(){
+        personPhoto = MoInfoImage(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.width))
+        self.addSubview(personPhoto!)
+    }
+    
     func initPlaceLabel(){
         myPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        myPlace?.center = CGPointMake(self.frame.size.width / 2, 50)
+        myPlace?.center = CGPointMake(self.frame.size.width / 2, 25 + self.frame.size.width)
         urPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        urPlace?.center = CGPointMake(self.frame.size.width / 2, 125)
+        urPlace?.center = CGPointMake(self.frame.size.width / 2, 75 + self.frame.size.width)
         myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
         myPlace?.textColor = UIColor.whiteColor()
         urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
