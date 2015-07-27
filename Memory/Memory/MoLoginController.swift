@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate{
+class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoInfoPhotoDelegate{
     
     var loginBlurView: FXBlurView?
     var setUpBlurView: FXBlurView?
@@ -61,6 +61,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         
         infoView = MoInfo(frame: self.view.bounds)
         infoView!.center = CGPointMake(self.view.frame.size.width * (CGFloat(2 * views.count + 1) / 2), self.view.frame.size.height / 2)
+        infoView?.personPhoto?.delegate = self
         self.view.addSubview(infoView!)
         views.append(infoView!)
     }
@@ -191,6 +192,31 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         setUping = true
         println("set up done!")
     }
+    
+    //---------------------------------info Image-----------------------------------
+    func doubleClickAction() {
+        var actionSheet = UIAlertController(title: "Source", message: "Please choose a source", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        var camera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler:{(action) -> Void in
+            self.pickPhotoFromCamera()
+        })
+
+        var album = UIAlertAction(title: "Album", style: UIAlertActionStyle.Default, handler: {(action) -> Void in
+            println("album")
+        })
+        var cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        actionSheet.addAction(camera)
+        actionSheet.addAction(album)
+        actionSheet.addAction(cancel)
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    func pickPhotoFromCamera(){
+        var picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+    }
+    
 }
 
 

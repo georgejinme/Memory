@@ -10,12 +10,18 @@ import Foundation
 import UIKit
 import Spring
 
+protocol MoInfoPhotoDelegate{
+    func doubleClickAction()
+}
+
 class MoInfoImage: SpringView{
     
     var imageEdge:UIImageView?
     var personImageView:UIImageView?
     
     var personImage = UIImage(named: "personDefault")
+    
+    var delegate: MoInfoPhotoDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -75,6 +81,6 @@ class MoInfoImage: SpringView{
     }
     
     func choosePhoto(sender: UILongPressGestureRecognizer){
-        println("doublePress")
+        delegate?.doubleClickAction()
     }
 }
