@@ -22,17 +22,27 @@ class MoInfoImage: SpringView{
         self.animation = "fadeIn"
         self.duration = 2.5
         self.curve = "easeIn"
+        initImageEdge()
         initPersonImage()
+        addGestrue()
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func initImageEdge(){
+        imageEdge = UIImageView(frame: CGRectMake(0, 0, self.frame.size.width - 45, self.frame.size.height - 45))
+        imageEdge?.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)
+        imageEdge?.image = UIImage(named: "photoedge")
+        self.addSubview(imageEdge!)
+    }
+    
     func initPersonImage(){
-        personImageView = UIImageView(frame: CGRectMake(0, 0, self.frame.size.width - 100, self.frame.size.height - 100))
+        personImageView = UIImageView(frame: CGRectMake(0, 0, self.frame.size.width - 80, self.frame.size.height - 80))
         personImageView?.image = personImage
         personImageView?.center = self.center
+        personImageView?.userInteractionEnabled = true
         self.addSubview(personImageView!)
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("personImage") == nil){
@@ -45,7 +55,7 @@ class MoInfoImage: SpringView{
             
             var tipLabel = UILabel(frame: CGRectMake(0, 0, blur.frame.size.width, 50))
             tipLabel.center = CGPointMake(blur.frame.size.width / 2, blur.frame.size.height / 2)
-            tipLabel.text = "Long Press to Upload a photo"
+            tipLabel.text = "Double Press to Upload a photo"
             tipLabel.textColor = UIColor.whiteColor()
             tipLabel.textAlignment = NSTextAlignment.Center
             tipLabel.font = UIFont(name: "STHeitiJ-Light", size: 16)
@@ -58,4 +68,13 @@ class MoInfoImage: SpringView{
         }
     }
     
+    func addGestrue(){
+        var doublePress = UITapGestureRecognizer(target: self, action: "choosePhoto:")
+        doublePress.numberOfTapsRequired = 2
+        self.addGestureRecognizer(doublePress)
+    }
+    
+    func choosePhoto(sender: UILongPressGestureRecognizer){
+        println("doublePress")
+    }
 }
