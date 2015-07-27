@@ -98,6 +98,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
                 }
             }else if views[oldView] == setUpBlurView{
                 setUp()
+                infoView!.calculateTime()
             }
         }
         
