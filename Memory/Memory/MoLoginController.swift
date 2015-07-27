@@ -197,11 +197,11 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     func doubleClickAction() {
         var actionSheet = UIAlertController(title: "Source", message: "Please choose a source", preferredStyle: UIAlertControllerStyle.ActionSheet)
         var camera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler:{(action) -> Void in
-            self.pickPhotoFromCamera()
+            self.pickPhotoFrom("camera")
         })
 
         var album = UIAlertAction(title: "Album", style: UIAlertActionStyle.Default, handler: {(action) -> Void in
-            
+            self.pickPhotoFrom("album")
         })
         var cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         actionSheet.addAction(camera)
@@ -210,14 +210,20 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         self.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
-    func pickPhotoFromCamera(){
+    func pickPhotoFrom(type: String){
         var picker = UIImagePickerController()
         picker.delegate = self
+        if (type == "camera"){
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.showsCameraControls = true
+            picker.cameraViewTransform = CGAffineTransformMakeScale(1.5, 1.5)
+        }else{
+            picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }
         picker.allowsEditing = true
-        picker.sourceType = UIImagePickerControllerSourceType.Camera
-        picker.cameraViewTransform = CGAffineTransformMakeScale(1.5, 1.5)
         self.presentViewController(picker, animated: true, completion: nil)
     }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         picker.dismissViewControllerAnimated(true, completion: nil)
