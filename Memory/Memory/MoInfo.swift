@@ -33,32 +33,39 @@ class MoInfo:MoView{
     }
     
     func initPlaceLabel(){
-        myPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        myPlace?.center = CGPointMake(self.frame.size.width / 2, 25 + self.frame.size.width)
         urPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        urPlace?.center = CGPointMake(self.frame.size.width / 2, 75 + self.frame.size.width)
-        myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
-        myPlace?.textColor = UIColor.whiteColor()
-        urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 36)
+        urPlace?.center = CGPointMake(self.frame.size.width / 2, 25 + self.frame.size.width)
+        urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 30)
         urPlace?.textColor = UIColor.whiteColor()
-        urPlace?.textAlignment = NSTextAlignment.Right
+        myPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
+        myPlace?.center = CGPointMake(self.frame.size.width / 2, 75 + self.frame.size.width)
+        myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 30)
+        myPlace?.textColor = UIColor.whiteColor()
+        myPlace?.textAlignment = NSTextAlignment.Right
     }
     
     override func beginAnimate(){
         self.addSubview(personPhoto!)
         personPhoto?.animateNext({
-            self.addSubview(self.myPlace!)
-            self.myPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("myplace") as? String
-            self.myPlace?.animation = "fadeInLeft"
-            self.myPlace?.curve = "easeIn"
-            self.myPlace?.duration = 2.4
-            self.myPlace?.animateNext({
-                self.urPlace?.text = NSUserDefaults.standardUserDefaults().objectForKey("urplace") as? String
-                self.addSubview(self.urPlace!)
-                self.urPlace?.animation = "fadeInRight"
-                self.urPlace?.curve = "easeIn"
-                self.urPlace?.duration = 2.4
-                self.urPlace?.animate()
+            self.addSubview(self.urPlace!)
+            self.urPlace?.text = "You are in " + (NSUserDefaults.standardUserDefaults().objectForKey("urplace") as? String)!
+            self.urPlace?.animation = "fadeInLeft"
+            self.urPlace?.curve = "easeIn"
+            self.urPlace?.duration = 2.4
+            self.urPlace?.animateNext({
+                var text = NSUserDefaults.standardUserDefaults().objectForKey("myplace") as! String
+                if text == (NSUserDefaults.standardUserDefaults().objectForKey("urplace") as! String){
+                    text = "I am always with you"
+                    
+                }else{
+                    text = "I am in " + text
+                }
+                self.myPlace?.text = text
+                self.addSubview(self.myPlace!)
+                self.myPlace?.animation = "fadeInRight"
+                self.myPlace?.curve = "easeIn"
+                self.myPlace?.duration = 2.4
+                self.myPlace?.animate()
             })
         })
     }

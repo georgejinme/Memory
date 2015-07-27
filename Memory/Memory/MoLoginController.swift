@@ -186,9 +186,12 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     func setUp(){
         var store = NSUserDefaults.standardUserDefaults()
-        store.setObject(urPlaceSetUp.text, forKey: "urplace")
-        store.setObject(myPlaceSetUp.text, forKey: "myplace")
-        store.setObject(timeSetUp.text, forKey: "memoryBeginTime")
+        var urplaceText = urPlaceSetUp.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        var myplaceText = myPlaceSetUp.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        var timeText = timeSetUp.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        store.setObject(urplaceText, forKey: "urplace")
+        store.setObject(myplaceText, forKey: "myplace")
+        store.setObject(timeText, forKey: "memoryBeginTime")
         setUping = true
         println("set up done!")
     }
