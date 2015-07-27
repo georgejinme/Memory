@@ -201,7 +201,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         })
 
         var album = UIAlertAction(title: "Album", style: UIAlertActionStyle.Default, handler: {(action) -> Void in
-            println("album")
+            
         })
         var cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         actionSheet.addAction(camera)
@@ -214,7 +214,18 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         var picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
-        
+        picker.sourceType = UIImagePickerControllerSourceType.Camera
+        picker.cameraViewTransform = CGAffineTransformMakeScale(1.5, 1.5)
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        infoView?.personPhoto?.blur?.removeFromSuperview()
+        infoView?.personPhoto?.personImageView?.image = image
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+        var imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
+        NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
     }
     
 }
