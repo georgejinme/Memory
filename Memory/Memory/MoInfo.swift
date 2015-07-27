@@ -17,11 +17,18 @@ class MoInfo:MoView{
     var myPlace: SpringLabel?
     var urPlace: SpringLabel?
     
+    var timeTips: SpringLabel?
+    var memoryTime: SpringLabel?
+    var memoryTimeSecond = 0
+    var memoryTimeString = "a long time..."
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         initPhoto()
         initPlaceLabel()
+        initTimeLabel()
+        calculateTime()
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -42,6 +49,23 @@ class MoInfo:MoView{
         myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 30)
         myPlace?.textColor = UIColor.whiteColor()
         myPlace?.textAlignment = NSTextAlignment.Right
+    }
+    
+    func initTimeLabel(){
+        timeTips = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
+        timeTips?.center = CGPointMake(self.frame.size.width / 2, 125 + self.frame.size.width)
+        timeTips?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        timeTips?.textColor = UIColor.whiteColor()
+        timeTips?.text = "Our memory has lasted for..."
+        timeTips?.textAlignment = NSTextAlignment.Center
+        
+        memoryTime = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 60))
+        memoryTime?.center = CGPointMake(self.frame.size.width / 2, 175 + self.frame.size.width)
+        memoryTime?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        memoryTime?.textColor = UIColor.yellowColor()
+        memoryTime?.text = memoryTimeString
+        memoryTime?.textAlignment = NSTextAlignment.Center
+        
     }
     
     override func beginAnimate(){
@@ -65,7 +89,19 @@ class MoInfo:MoView{
                 self.myPlace?.animation = "fadeInRight"
                 self.myPlace?.curve = "easeIn"
                 self.myPlace?.duration = 2.4
-                self.myPlace?.animate()
+                self.myPlace?.animateNext({
+                    self.addSubview(self.timeTips!)
+                    self.timeTips?.animation = "fadeIn"
+                    self.timeTips?.curve = "easeIn"
+                    self.timeTips?.duration = 2.5
+                    self.timeTips?.animateNext({
+                        self.addSubview(self.memoryTime!)
+                        self.memoryTime?.animation = "fadeIn"
+                        self.memoryTime?.curve = "easeIn"
+                        self.memoryTime?.duration = 2.5
+                        self.memoryTime?.animate()
+                    })
+                })
             })
         })
     }
@@ -75,4 +111,36 @@ class MoInfo:MoView{
         urPlace?.removeFromSuperview()
     }
     
+    func calculateTime(){
+        var date = NSDate()
+        var format = NSDateFormatter()
+        format.dateFormat = "yyyyMMdd"
+        var dateString = format.stringFromDate(date)
+        var beginTimeString = NSUserDefaults.standardUserDefaults().objectForKey("memoryBeginTime") as! String
+        var beginDate = format.dateFromString(beginTimeString)
+        if (beginDate == nil){
+            var alert = UIAlertView(title: "Warning", message: "Invaild date format. Please input the date with format 'YYYYMMDD' in setting view", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }else{
+            memoryTimeSecond = NSInteger(date.timeIntervalSinceDate(beginDate!))
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTime:", userInfo: nil, repeats: true)
+        }
+    }
+    func updateTime(sender:NSTimer){
+        ++memoryTimeSecond
+        var totalSecond = memoryTimeSecond
+        var second = String(totalSecond % 60)
+        totalSecond /= 60
+        var minute = String(totalSecond % 60)
+        totalSecond /= 60
+        var hour = String(totalSecond % 24)
+        totalSecond /= 24
+        var day = String(totalSecond)
+        memoryTimeString = day + "days " + hour + "hours " + minute + "mins " + second + "s"
+        memoryTime?.text = memoryTimeString
+        
+        if(memoryTimeSecond % 2 == 0){
+            memoryTime?.twinkle()
+        }
+    }
 }

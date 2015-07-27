@@ -53,7 +53,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             views.append(setUpBlurView!)
             initMyPlace(setUpBlurView!, "Where am I?")
             initUrPlace(setUpBlurView!, "Where are you?")
-            initMemoryTime(setUpBlurView!, "When did your memory begin?")
+            initMemoryTime(setUpBlurView!, "When did your memory begin(YYYYMMDD)?")
             myPlaceSetUp.delegate = self
             urPlaceSetUp.delegate = self
             timeSetUp.delegate = self
