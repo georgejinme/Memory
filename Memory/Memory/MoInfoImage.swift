@@ -44,7 +44,7 @@ class MoInfoImage: SpringView{
     }
     
     func initPersonImage(){
-        personImageView = UIImageView(frame: CGRectMake(0, 0, self.frame.size.width - 80, self.frame.size.height - 80))
+        personImageView = UIImageView(frame: CGRectMake(0, 0, self.frame.size.width - 76, self.frame.size.height - 76))
         personImageView?.image = UIImage(named: "personDefault")
         personImageView?.center = self.center
         personImageView?.userInteractionEnabled = true

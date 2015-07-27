@@ -229,7 +229,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         picker.dismissViewControllerAnimated(true, completion: nil)
         infoView?.personPhoto?.blur?.removeFromSuperview()
         infoView?.personPhoto?.personImageView?.image = image
-        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         var imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
         NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
     }
