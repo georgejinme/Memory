@@ -14,6 +14,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     var loginBlurView: FXBlurView?
     var setUpBlurView: FXBlurView?
     var infoView: MoInfo?
+    var detailView: MoDetail?
     
     var beginLoc: CGPoint = CGPoint()
     
@@ -23,6 +24,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     var views: [UIView] = []
     var currentView = 0
     var oldView = 0
+    var loadedView: [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         loginBlurView = initLoginView(self.view)
         self.view.addSubview(loginBlurView!)
         views.append(loginBlurView!)
+        loadedView.append(false)
         if (FIRST_LOGIN){
             loginPlaceHolder = "Please Set Your Password. Left Swipe to Confirm"
         }else{
@@ -50,6 +53,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         if (FIRST_LOGIN){
             setUpBlurView = initSetUpView(self.view)
             self.view.addSubview(setUpBlurView!)
+            loadedView.append(false)
             views.append(setUpBlurView!)
             initMyPlace(setUpBlurView!, "Where am I?")
             initUrPlace(setUpBlurView!, "Where are you?")
@@ -64,6 +68,15 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         infoView?.personPhoto?.delegate = self
         self.view.addSubview(infoView!)
         views.append(infoView!)
+        loadedView.append(false)
+        
+        detailView = MoDetail(frame: self.view.bounds)
+        detailView!.center = CGPointMake(self.view.frame.size.width * (CGFloat(2 * views.count + 1) / 2), self.view.frame.size.height / 2)
+        self.view.addSubview(detailView!)
+        views.append(detailView!)
+        loadedView.append(false)
+
+        
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -110,25 +123,28 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.views[self.currentView].center = CGPointMake(self.view.center.x, self.views[self.currentView].center.y)
-            }, completion: nil)
-        
-        if (moveOrNot != "not move"){
-            if (loginRes == "success"){
-                loginRes = "not use"
-                self.views.removeAtIndex(0)
-                oldView = 0
-                currentView = 0
-            }else if (setUping){
-                self.views.removeAtIndex(0)
-                oldView = 0
-                currentView = 0
-            }
-        }
-        
-        if (moveOrNot != "not move" && views[oldView] != loginBlurView && views[currentView] != loginBlurView && views[oldView] != setUpBlurView && views[currentView] != setUpBlurView){
-            (self.views[oldView] as! MoView).removeAnimate()
-            (self.views[currentView] as! MoView).beginAnimate()
-        }
+            }, completion: {(finish) -> Void in
+                if (moveOrNot != "not move"){
+                    if (loginRes == "success"){
+                        loginRes = "not use"
+                        self.views.removeAtIndex(0)
+                        self.loadedView.removeAtIndex(0)
+                        self.oldView = 0
+                        self.currentView = 0
+                    }else if (self.setUping){
+                        self.views.removeAtIndex(0)
+                        self.loadedView.removeAtIndex(0)
+                        self.oldView = 0
+                        self.currentView = 0
+                    }
+                }
+                if (self.views[self.oldView] != self.loginBlurView && self.views[self.currentView] != self.loginBlurView && self.views[self.oldView] != self.setUpBlurView && self.views[self.currentView] != self.setUpBlurView){
+                    if (self.loadedView[self.currentView] == false){
+                        (self.views[self.currentView] as! MoView).beginAnimate()
+                    }
+                }
+                self.loadedView[self.currentView] = true
+            })
         
     }
     

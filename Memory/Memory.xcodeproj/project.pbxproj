@@ -14,6 +14,7 @@
 		FF4995721B629E67009D694A /* MoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4995711B629E67009D694A /* MoView.swift */; };
 		FF4995741B62AAEC009D694A /* MoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4995731B62AAEC009D694A /* MoLogin.swift */; };
 		FF4995761B62ABD4009D694A /* MoSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4995751B62ABD4009D694A /* MoSetUp.swift */; };
+		FFE0007C1B675E2700F44C5D /* MoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0007B1B675E2700F44C5D /* MoDetail.swift */; };
 		FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */; };
 		FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF180211B5F4A7700C450DE /* Images.xcassets */; };
 		FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF180231B5F4A7700C450DE /* LaunchScreen.xib */; };
@@ -47,6 +48,7 @@
 		FF4995711B629E67009D694A /* MoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoView.swift; sourceTree = "<group>"; };
 		FF4995731B62AAEC009D694A /* MoLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoLogin.swift; sourceTree = "<group>"; };
 		FF4995751B62ABD4009D694A /* MoSetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoSetUp.swift; sourceTree = "<group>"; };
+		FFE0007B1B675E2700F44C5D /* MoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoDetail.swift; sourceTree = "<group>"; };
 		FFF180151B5F4A7600C450DE /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF180191B5F4A7600C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 				FF4995751B62ABD4009D694A /* MoSetUp.swift */,
 			);
 			name = SetUp;
+			sourceTree = "<group>";
+		};
+		FFE0007A1B675E1800F44C5D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FFE0007B1B675E2700F44C5D /* MoDetail.swift */,
+			);
+			name = Details;
 			sourceTree = "<group>";
 		};
 		FFF1800C1B5F4A7600C450DE = {
@@ -233,6 +243,7 @@
 				FF26F1101B652417002A8428 /* SetUp */,
 				FF26F10F1B65240C002A8428 /* Login */,
 				FF26F10E1B652401002A8428 /* Info */,
+				FFE0007A1B675E1800F44C5D /* Details */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -391,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE0007C1B675E2700F44C5D /* MoDetail.swift in Sources */,
 				FF4995721B629E67009D694A /* MoView.swift in Sources */,
 				FF4995741B62AAEC009D694A /* MoLogin.swift in Sources */,
 				FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */,

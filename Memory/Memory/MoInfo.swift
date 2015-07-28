@@ -107,8 +107,11 @@ class MoInfo:MoView{
     }
     
     override func removeAnimate(){
+        personPhoto?.removeFromSuperview()
         myPlace?.removeFromSuperview()
         urPlace?.removeFromSuperview()
+        timeTips?.removeFromSuperview()
+        memoryTime?.removeFromSuperview()
     }
     
     func calculateTime(){
