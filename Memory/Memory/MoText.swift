@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
+
+class MoText: Object{
+    dynamic var title = ""
+    dynamic var date = ""
+    dynamic var wordNum = 0
+    dynamic var content = ""
+    dynamic var photos: [MoPhoto] = []
+}
