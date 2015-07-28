@@ -116,8 +116,14 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         }
         
         if (moveOrNot != "not move" && loginRes != "fail"){
+            var newCenterX:CGFloat = 0
+            if (moveOrNot == "left"){
+                newCenterX = -1 * self.view.center.x
+            }else if (moveOrNot == "right"){
+                newCenterX = 3 * self.view.center.x
+            }
             UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.views[self.oldView].center = CGPointMake(-1 * self.view.center.x, self.views[self.oldView].center.y)
+                self.views[self.oldView].center = CGPointMake(newCenterX, self.views[self.oldView].center.y)
                 }, completion: nil)
         }
         
@@ -251,6 +257,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         infoView?.personPhoto?.personImageView?.image = image
         var imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
         NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
+        NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
     }
     
 }
