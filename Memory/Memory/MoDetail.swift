@@ -57,6 +57,15 @@ class MoDetail: MoView{
         wordNum?.textAlignment = NSTextAlignment.Right
     }
     
+    func drawLineSperator(start: CGFloat, end: CGFloat, y: CGFloat, duration: NSTimeInterval){
+        var line = UIView(frame: CGRectMake(start, y, 0, 2))
+        line.backgroundColor = UIColor.whiteColor()
+        self.addSubview(line)
+        UIView.animateWithDuration(duration, animations: {
+            line.frame.size.width = end - start
+        })
+    }
+    
     
     override func beginAnimate() {
         self.addSubview(spaceLabelTip!)
@@ -81,6 +90,8 @@ class MoDetail: MoView{
             self.wordNum?.curve = "easeIn"
             self.wordNum?.duration = 1.5
             self.wordNum?.animate()
+            
+            self.drawLineSperator(0, end: self.frame.size.width, y: 200, duration: 1.5)
         })
     }
 }
