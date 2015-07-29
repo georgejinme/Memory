@@ -250,27 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoTable.swift"
-            timestampString = "459853756.667345"
+            timestampString = "459856272.462544"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "drawSeperateLine(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Memory/MoTable.swift"
-            timestampString = "459853756.667345"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "drawSeperateLine(_:)"
             landmarkType = "5">
          </BreakpointContent>

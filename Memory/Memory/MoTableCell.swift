@@ -12,7 +12,6 @@ import UIKit
 class MoTableCell: UITableViewCell{
     
     var horizenLine: UIView?
-    var drawn: Bool = false
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,7 +19,7 @@ class MoTableCell: UITableViewCell{
         self.contentView.backgroundColor = UIColor.clearColor()
         self.selectionStyle = UITableViewCellSelectionStyle.None
         
-        horizenLine = UIView(frame: CGRectMake(0, self.frame.size.height + 25, 0, 1))
+        horizenLine = UIView(frame: CGRectMake(0, self.frame.size.height + 25, 0, 2))
         horizenLine?.backgroundColor = UIColor.whiteColor()
         self.addSubview(horizenLine!)
     }

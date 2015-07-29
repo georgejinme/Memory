@@ -15,6 +15,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     var cellHeight:CGFloat = 70
     
     var showRow:Int = 0
+    var totalRow:Int = 10
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +27,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         self.moTable?.backgroundColor = UIColor.clearColor()
         self.moTable?.userInteractionEnabled = false
         self.moTable?.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         self.addSubview(moTable!)
     }
     
@@ -38,7 +40,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return totalRow
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: MoTableCell = self.moTable?.dequeueReusableCellWithIdentifier("moCell") as! MoTableCell
@@ -49,30 +51,39 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     }
     
     func drawSeperateLine(time: Int){
-        if (time == showRow) {
+        if (time == Int(self.frame.size.height) / Int(cellHeight) + 1) {
             return
         }else{
-            var verticalLine = UIView(frame: CGRectMake(0, cellHeight * CGFloat(time), 2, 0))
+            var verticalLine = UIView(frame: CGRectMake(0, CGFloat(time) * cellHeight, 1, 0))
             verticalLine.backgroundColor = UIColor.whiteColor()
             self.addSubview(verticalLine)
             UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
                 verticalLine.frame.size.height = self.cellHeight
                 }, completion: {(finish) -> Void in
-                    let cell = self.moTable!.cellForRowAtIndexPath(NSIndexPath(forRow: time, inSection: 0)) as! MoTableCell
-                    UIView.animateWithDuration(0.5, animations: {
-                        cell.horizenLine!.frame.size.width = 300
-                        }, completion: {(finish) -> Void in
-                            if time == self.showRow - 1{
-                                self.moTable?.userInteractionEnabled = true
-                            }
-                        })
+                    if (time < self.showRow){
+                        let cell = self.moTable!.cellForRowAtIndexPath(NSIndexPath(forRow: time, inSection: 0)) as! MoTableCell
+                        UIView.animateWithDuration(0.5, animations: {
+                            cell.horizenLine!.frame.size.width = 300
+                            }, completion: nil)
+                    }
     
                     self.drawSeperateLine(time + 1)
+                    if time == self.showRow - 1{
+                        self.moTable?.userInteractionEnabled = true
+                    }
             })
         }
     }
     
     func initShowRow(){
-        showRow = Int(self.frame.size.height) / Int(cellHeight) + 1
+        var height = CGFloat(totalRow) * cellHeight
+        if (height < self.frame.size.height){
+            showRow = totalRow
+        }
+        else {
+            showRow = Int(self.frame.size.height) / Int(cellHeight) + 1
+        }
+        println(showRow)
     }
+    
 }
