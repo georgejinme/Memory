@@ -19,7 +19,7 @@ class MoTableCell: UITableViewCell{
         self.contentView.backgroundColor = UIColor.clearColor()
         self.selectionStyle = UITableViewCellSelectionStyle.None
         
-        horizenLine = UIView(frame: CGRectMake(0, self.frame.size.height + 25, 0, 2))
+        horizenLine = UIView(frame: CGRectMake(0, self.frame.size.height + 25, 0, 1))
         horizenLine?.backgroundColor = UIColor.whiteColor()
         self.addSubview(horizenLine!)
     }

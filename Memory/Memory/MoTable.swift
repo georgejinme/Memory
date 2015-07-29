@@ -54,7 +54,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         if (time == Int(self.frame.size.height) / Int(cellHeight) + 1) {
             return
         }else{
-            var verticalLine = UIView(frame: CGRectMake(0, CGFloat(time) * cellHeight, 1, 0))
+            var verticalLine = UIView(frame: CGRectMake(0, CGFloat(time) * cellHeight, 2, 0))
             verticalLine.backgroundColor = UIColor.whiteColor()
             self.addSubview(verticalLine)
             UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
