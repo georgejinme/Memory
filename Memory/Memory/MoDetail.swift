@@ -17,6 +17,8 @@ class MoDetail: MoView{
     var photoNum: SpringLabel?
     var wordNum: SpringLabel?
     
+    var detailTable: MoTable?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSpaceLabel()
@@ -61,9 +63,20 @@ class MoDetail: MoView{
         var line = UIView(frame: CGRectMake(start, y, 0, 2))
         line.backgroundColor = UIColor.whiteColor()
         self.addSubview(line)
-        UIView.animateWithDuration(duration, animations: {
-            line.frame.size.width = end - start
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            line.frame.size.width = 20
+            }, completion:{(finish) -> Void in
+                self.detailTable?.drawSeperateLine(0)
         })
+        UIView.animateWithDuration(duration - 0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            line.frame.size.width = end - start
+        }, completion: nil)
+        
+    }
+    
+    func initDetailTable(){
+        detailTable = MoTable(frame: CGRectMake(40, 200, self.frame.size.width - 20, self.frame.size.height - 200))
+        self.addSubview(detailTable!)
     }
     
     
@@ -92,6 +105,7 @@ class MoDetail: MoView{
             self.wordNum?.animate()
             
             self.drawLineSperator(0, end: self.frame.size.width, y: 200, duration: 1.5)
+            self.initDetailTable()
         })
     }
 }

@@ -21,6 +21,8 @@
 		FFE0008C1B67827C00F44C5D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFE0008A1B67827C00F44C5D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFE0008F1B6782F900F44C5D /* MoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0008E1B6782F900F44C5D /* MoText.swift */; };
 		FFE000911B67839A00F44C5D /* MoPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE000901B67839A00F44C5D /* MoPhoto.swift */; };
+		FFE1C7701B6897BB00CE0D4D /* MoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */; };
+		FFE1C7731B689B5700CE0D4D /* MoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */; };
 		FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */; };
 		FFF180221B5F4A7700C450DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF180211B5F4A7700C450DE /* Images.xcassets */; };
 		FFF180251B5F4A7700C450DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF180231B5F4A7700C450DE /* LaunchScreen.xib */; };
@@ -76,6 +78,8 @@
 		FFE0008A1B67827C00F44C5D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FFE0008E1B6782F900F44C5D /* MoText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoText.swift; sourceTree = "<group>"; };
 		FFE000901B67839A00F44C5D /* MoPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoPhoto.swift; sourceTree = "<group>"; };
+		FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoTable.swift; sourceTree = "<group>"; };
+		FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoTableCell.swift; sourceTree = "<group>"; };
 		FFF180151B5F4A7600C450DE /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF180191B5F4A7600C450DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF1801A1B5F4A7600C450DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		FFE0008D1B6782E400F44C5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */,
+				FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */,
 				FFE0008E1B6782F900F44C5D /* MoText.swift */,
 				FFE000901B67839A00F44C5D /* MoPhoto.swift */,
 			);
@@ -446,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE1C7731B689B5700CE0D4D /* MoTableCell.swift in Sources */,
 				FFE0007C1B675E2700F44C5D /* MoDetail.swift in Sources */,
 				FF4995721B629E67009D694A /* MoView.swift in Sources */,
 				FF4995741B62AAEC009D694A /* MoLogin.swift in Sources */,
@@ -458,6 +465,7 @@
 				FFF1805D1B5FF77200C450DE /* MoInfo.swift in Sources */,
 				FFF1803E1B5F4F2E00C450DE /* MoLoginController.swift in Sources */,
 				FF49956D1B627500009D694A /* Twinkle.swift in Sources */,
+				FFE1C7701B6897BB00CE0D4D /* MoTable.swift in Sources */,
 				FF26F1121B6524F1002A8428 /* MoInfoImage.swift in Sources */,
 				FFF180471B5F66E000C450DE /* MoBGController.swift in Sources */,
 			);
