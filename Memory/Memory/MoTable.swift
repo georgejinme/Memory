@@ -17,8 +17,11 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     var showRow:Int = 0
     var totalRow:Int = 10
     
-    override init(frame: CGRect) {
+    var contents: [MoText] = []
+    
+    init(frame: CGRect, c: [MoText]) {
         super.init(frame: frame)
+        self.contents = c
         initShowRow()
         self.moTable = UITableView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height), style: UITableViewStyle.Plain)
         self.moTable?.delegate = self
@@ -27,7 +30,6 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         self.moTable?.backgroundColor = UIColor.clearColor()
         self.moTable?.userInteractionEnabled = false
         self.moTable?.separatorStyle = UITableViewCellSeparatorStyle.None
-        
         self.addSubview(moTable!)
     }
     
@@ -47,6 +49,10 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         if (indexPath.row >= showRow){
             cell.horizenLine?.frame.size.width = 300
         }
+        cell.articlePhoto?.image = UIImage(data: contents[indexPath.row].photos[0].photo)
+        cell.articlePhoto?.animate()
+        cell.date?.text = contents[indexPath.row].date
+        cell.date?.animate()
         return cell
     }
     
@@ -76,6 +82,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     }
     
     func initShowRow(){
+        totalRow = self.contents.count
         var height = CGFloat(totalRow) * cellHeight
         if (height < self.frame.size.height){
             showRow = totalRow

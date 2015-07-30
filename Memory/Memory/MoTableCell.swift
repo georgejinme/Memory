@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
+import Spring
 
 class MoTableCell: UITableViewCell{
     
     var horizenLine: UIView?
+    var articlePhoto: SpringImageView?
+    var date: SpringLabel?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,6 +25,21 @@ class MoTableCell: UITableViewCell{
         horizenLine = UIView(frame: CGRectMake(0, self.frame.size.height + 25, 0, 1))
         horizenLine?.backgroundColor = UIColor.whiteColor()
         self.addSubview(horizenLine!)
+        
+        articlePhoto = SpringImageView(frame: CGRectMake(0, 0, self.frame.size.height + 25, self.frame.size.height + 25))
+        articlePhoto?.animation = "fadeIn"
+        articlePhoto?.curve = "easeIn"
+        articlePhoto?.duration = 2.5
+        self.addSubview(articlePhoto!)
+        
+        date = SpringLabel(frame: CGRectMake(self.frame.size.height + 25, 0, self.frame.size.width - self.frame.size.height, 50))
+        date?.center.y = (self.frame.size.height + 25) / 2
+        date?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        date?.textColor = UIColor.whiteColor()
+        date?.animation = "fadeIn"
+        date?.curve = "easeIn"
+        date?.duration = 2.5
+        self.addSubview(date!)
     }
     
     required init(coder aDecoder: NSCoder) {

@@ -255,7 +255,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         picker.dismissViewControllerAnimated(true, completion: nil)
         infoView?.personPhoto?.blur?.removeFromSuperview()
         infoView?.personPhoto?.personImageView?.image = image
-        var imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
+        var imageData = UIImagePNGRepresentation(image)
         NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
         NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
     }

@@ -72,8 +72,7 @@ class MoInfoImage: SpringView{
             blur!.addSubview(uploadIcon)
         }else{
             var imageData = NSUserDefaults.standardUserDefaults().objectForKey("personImage") as! NSData
-            var image = NSKeyedUnarchiver.unarchiveObjectWithData(imageData) as! UIImage
-            personImageView?.image = image
+            personImageView?.image = UIImage(data: imageData)
         }
     }
     

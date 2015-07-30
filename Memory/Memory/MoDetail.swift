@@ -23,8 +23,8 @@ class MoDetail: MoView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initSpaceLabel()
         initArticle()
+        initSpaceLabel()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -78,7 +78,7 @@ class MoDetail: MoView{
     }
     
     func initDetailTable(){
-        detailTable = MoTable(frame: CGRectMake(40, 200, self.frame.size.width - 20, self.frame.size.height - 200))
+        detailTable = MoTable(frame: CGRectMake(40, 200, self.frame.size.width - 20, self.frame.size.height - 200), c: articles)
         self.addSubview(detailTable!)
     }
     
@@ -114,11 +114,12 @@ class MoDetail: MoView{
     
     func initArticle(){
         let realm = Realm()
+        
         if (FIRST_LOGIN){
             let firstArticle = MoText()
-            firstArticle.title = "create new article"
+            firstArticle.date = "create new article"
             let firstPhoto = MoPhoto()
-            firstPhoto.photo = NSKeyedArchiver.archivedDataWithRootObject(UIImage(named: "add")!)
+            firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
             firstArticle.photos.append(firstPhoto)
             realm.write{
                 realm.add(firstArticle)
@@ -128,7 +129,6 @@ class MoDetail: MoView{
                 articles.append(each)
             }
         }
-        println(articles)
     }
 }
 
