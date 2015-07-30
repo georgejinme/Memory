@@ -46,6 +46,8 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: MoTableCell = self.moTable?.dequeueReusableCellWithIdentifier("moCell") as! MoTableCell
+        cell.position = indexPath.row
+        cell.delegate = MoLoginController()
         if (indexPath.row >= showRow){
             cell.horizenLine?.frame.size.width = 300
         }
@@ -55,6 +57,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         cell.date?.animate()
         return cell
     }
+    
     
     func drawSeperateLine(time: Int){
         if (time == Int(self.frame.size.height) / Int(cellHeight) + 1) {

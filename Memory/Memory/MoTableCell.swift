@@ -10,11 +10,18 @@ import Foundation
 import UIKit
 import Spring
 
+protocol MoTableCellDelegate{
+    func photoTouch(pos: Int)
+    func dateTouch(pos: Int)
+}
+
 class MoTableCell: UITableViewCell{
+    var position = 0
     
     var horizenLine: UIView?
     var articlePhoto: SpringImageView?
     var date: SpringLabel?
+    var delegate: MoTableCellDelegate?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -30,6 +37,11 @@ class MoTableCell: UITableViewCell{
         articlePhoto?.animation = "fadeIn"
         articlePhoto?.curve = "easeIn"
         articlePhoto?.duration = 2.5
+        articlePhoto?.userInteractionEnabled = true
+        articlePhoto?.multipleTouchEnabled = true
+        var photoTapGesture = UITapGestureRecognizer(target: self, action: "photo:")
+        photoTapGesture.numberOfTapsRequired = 1
+        articlePhoto?.addGestureRecognizer(photoTapGesture)
         self.addSubview(articlePhoto!)
         
         date = SpringLabel(frame: CGRectMake(self.frame.size.height + 25, 0, self.frame.size.width - self.frame.size.height, 50))
@@ -39,6 +51,11 @@ class MoTableCell: UITableViewCell{
         date?.animation = "fadeIn"
         date?.curve = "easeIn"
         date?.duration = 2.5
+        date?.userInteractionEnabled = true
+        date?.multipleTouchEnabled = true
+        var dateTapGesture = UITapGestureRecognizer(target: self, action: "date:")
+        dateTapGesture.numberOfTapsRequired = 1
+        date?.addGestureRecognizer(dateTapGesture)
         self.addSubview(date!)
     }
     
@@ -49,6 +66,14 @@ class MoTableCell: UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func photo(sender: UITapGestureRecognizer){
+        delegate?.photoTouch(self.position)
+    }
+    
+    func date(sender: UITapGestureRecognizer){
+        delegate?.dateTouch(self.position)
     }
     
     
