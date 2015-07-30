@@ -10,18 +10,12 @@ import Foundation
 import UIKit
 import Spring
 
-protocol MoTableCellDelegate{
-    func photoTouch(pos: Int)
-    func dateTouch(pos: Int)
-}
-
 class MoTableCell: UITableViewCell{
     var position = 0
     
     var horizenLine: UIView?
     var articlePhoto: SpringImageView?
     var date: SpringLabel?
-    var delegate: MoTableCellDelegate?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -69,11 +63,11 @@ class MoTableCell: UITableViewCell{
     }
     
     func photo(sender: UITapGestureRecognizer){
-        delegate?.photoTouch(self.position)
+        
     }
     
     func date(sender: UITapGestureRecognizer){
-        delegate?.dateTouch(self.position)
+        (self.superview?.superview?.superview?.superview as! MoDetail).initNewArticleView(self.position)
     }
     
     

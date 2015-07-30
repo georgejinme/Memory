@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE5E438ED408A981E4C9C72 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FF26F1121B6524F1002A8428 /* MoInfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26F1111B6524F1002A8428 /* MoInfoImage.swift */; };
+		FF41A29F1B6A3EBC00060C25 /* MoNewArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */; };
 		FF49956B1B6274FA009D694A /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FF49956A1B6274FA009D694A /* TwinkleImage.png */; };
 		FF49956D1B627500009D694A /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF49956C1B627500009D694A /* Twinkle.swift */; };
 		FF4995721B629E67009D694A /* MoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4995711B629E67009D694A /* MoView.swift */; };
@@ -66,6 +67,7 @@
 		37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AE5E438ED408A981E4C9C72 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF26F1111B6524F1002A8428 /* MoInfoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoInfoImage.swift; sourceTree = "<group>"; };
+		FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoNewArticle.swift; sourceTree = "<group>"; };
 		FF49956A1B6274FA009D694A /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinkleImage.png; sourceTree = "<group>"; };
 		FF49956C1B627500009D694A /* Twinkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twinkle.swift; sourceTree = "<group>"; };
 		FF4995711B629E67009D694A /* MoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				FFE0007B1B675E2700F44C5D /* MoDetail.swift */,
+				FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */,
+				FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */,
+				FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */,
 			);
 			name = Details;
 			sourceTree = "<group>";
@@ -175,8 +180,6 @@
 		FFE0008D1B6782E400F44C5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */,
-				FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */,
 				FFE0008E1B6782F900F44C5D /* MoText.swift */,
 				FFE000901B67839A00F44C5D /* MoPhoto.swift */,
 			);
@@ -457,6 +460,7 @@
 				FF4995721B629E67009D694A /* MoView.swift in Sources */,
 				FF4995741B62AAEC009D694A /* MoLogin.swift in Sources */,
 				FFF1801B1B5F4A7600C450DE /* AppDelegate.swift in Sources */,
+				FF41A29F1B6A3EBC00060C25 /* MoNewArticle.swift in Sources */,
 				FFF1804C1B5F6CAD00C450DE /* FXBlurView.m in Sources */,
 				FFF180521B5F903500C450DE /* Constant.swift in Sources */,
 				FFE000911B67839A00F44C5D /* MoPhoto.swift in Sources */,

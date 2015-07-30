@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoInfoPhotoDelegate, MoTableCellDelegate{
+class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoInfoPhotoDelegate{
     
     var loginBlurView: FXBlurView?
     var setUpBlurView: FXBlurView?
@@ -75,8 +75,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         self.view.addSubview(detailView!)
         views.append(detailView!)
         loadedView.append(false)
-
-        
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -258,17 +256,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         var imageData = UIImagePNGRepresentation(image)
         NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
         NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
-    }
-    
-    //--------------------------------detail article----------------------------------
-    func photoTouch(pos: Int) {
-        println("photo touch")
-        println(pos)
-    }
-    
-    func dateTouch(pos: Int) {
-        println("date touch")
-        println(pos)
     }
     
 }

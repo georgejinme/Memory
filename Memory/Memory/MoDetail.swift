@@ -20,6 +20,9 @@ class MoDetail: MoView{
     
     var detailTable: MoTable?
     var articles:[MoText] = []
+    //var chosenArticle = 0
+    
+    var newArticles:MoNewArticle?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,6 +84,16 @@ class MoDetail: MoView{
         detailTable = MoTable(frame: CGRectMake(40, 200, self.frame.size.width - 20, self.frame.size.height - 200), c: articles)
         self.addSubview(detailTable!)
     }
+    
+    func initNewArticleView(pos: Int){
+        newArticles = MoNewArticle(frame: CGRectMake(40, 40, self.frame.size.width - 80, self.frame.size.height - 80))
+        newArticles?.animation = "fadeInUp"
+        newArticles?.curve = "easeIn"
+        newArticles?.duration = 1.6
+        self.addSubview(newArticles!)
+        newArticles?.animate()
+    }
+    
     
     
     override func beginAnimate() {
