@@ -10,5 +10,5 @@ import Foundation
 import RealmSwift
 
 class MoPhoto: Object{
-    dynamic var photo: UIImage?
+    dynamic var photo = NSData()
 }

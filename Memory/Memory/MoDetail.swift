@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Spring
+import RealmSwift
 
 class MoDetail: MoView{
     
@@ -18,10 +19,12 @@ class MoDetail: MoView{
     var wordNum: SpringLabel?
     
     var detailTable: MoTable?
+    var articles:[MoText] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSpaceLabel()
+        initArticle()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -107,6 +110,25 @@ class MoDetail: MoView{
             self.drawLineSperator(0, end: self.frame.size.width, y: 200, duration: 1.5)
             self.initDetailTable()
         })
+    }
+    
+    func initArticle(){
+        let realm = Realm()
+        if (FIRST_LOGIN){
+            let firstArticle = MoText()
+            firstArticle.title = "create new article"
+            let firstPhoto = MoPhoto()
+            firstPhoto.photo = NSKeyedArchiver.archivedDataWithRootObject(UIImage(named: "add")!)
+            firstArticle.photos.append(firstPhoto)
+            realm.write{
+                realm.add(firstArticle)
+            }
+        }else{
+            for each in realm.objects(MoText){
+                articles.append(each)
+            }
+        }
+        println(articles)
     }
 }
 

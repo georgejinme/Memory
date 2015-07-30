@@ -14,5 +14,5 @@ class MoText: Object{
     dynamic var date = ""
     dynamic var wordNum = 0
     dynamic var content = ""
-    dynamic var photos: [MoPhoto] = []
+    let photos = List<MoPhoto>()
 }

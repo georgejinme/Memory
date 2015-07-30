@@ -83,7 +83,6 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         else {
             showRow = Int(self.frame.size.height) / Int(cellHeight) + 1
         }
-        println(showRow)
     }
     
 }
