@@ -10,10 +10,14 @@ import Foundation
 import UIKit
 import Spring
 
-class MoNewArticle: SpringView{
+class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
     
     var backGround: UIImageView?
     var topToolBar: UIToolbar?
+    
+    var titleText: UITextField?
+    var dateText: UITextField?
+    var contentView: UITextView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,6 +25,7 @@ class MoNewArticle: SpringView{
         self.layer.borderWidth = 1
         initImage()
         initToolBar()
+        initTextSection()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -56,6 +61,55 @@ class MoNewArticle: SpringView{
         topToolBar?.items = [cancelButton, flexibleSpace, uploadButton, flexibleSpace, doneButton]
         self.addSubview(topToolBar!)
     }
+    
+    func initTextSection(){
+        titleText = UITextField(frame: CGRectMake(0, 40, self.frame.size.width - 10, 50))
+        titleText?.center.x = self.frame.size.width / 2
+        titleText?.placeholder = "Input your title here..."
+        titleText?.delegate = self
+        titleText?.setValue(UIColor(red: 210.0/255, green: 210.0/255, blue: 210.0/225, alpha: 1), forKeyPath: "_placeholderLabel.textColor")
+        titleText?.returnKeyType = UIReturnKeyType.Done
+        titleText?.font = UIFont(name: "STHeitiJ-Light", size: 14)
+        titleText?.textColor = UIColor.whiteColor()
+        self.addSubview(titleText!)
+        
+        dateText = UITextField(frame: CGRectMake(0, 90, self.frame.size.width - 10, 50))
+        dateText?.center.x = self.frame.size.width / 2
+        dateText?.placeholder = "Input your date here..."
+        dateText?.delegate = self
+        dateText?.setValue(UIColor(red: 210.0/255, green: 210.0/255, blue: 210.0/225, alpha: 1), forKeyPath: "_placeholderLabel.textColor")
+        dateText?.returnKeyType = UIReturnKeyType.Done
+        dateText?.font = UIFont(name: "STHeitiJ-Light", size: 14)
+        dateText?.textColor = UIColor.whiteColor()
+        self.addSubview(dateText!)
+        
+        contentView = UITextView(frame: CGRectMake(0, 150, self.frame.size.width, self.frame.size.height - 150))
+        contentView?.textColor = UIColor(red: 210.0/255, green: 210.0/255, blue: 210.0/225, alpha: 1)
+        contentView?.text = "Input the content here..."
+        contentView?.delegate = self
+        contentView?.font = UIFont(name: "STHeitiJ-Light", size: 16)
+        contentView?.backgroundColor = UIColor.clearColor()
+        self.addSubview(contentView!)
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.text == "Input the content here..."{
+            textView.text = ""
+            textView.textColor = UIColor.whiteColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text == ""{
+            textView.textColor = UIColor(red: 210.0/255, green: 210.0/255, blue: 210.0/225, alpha: 1)
+            textView.text = "Input the content here..."
+        }
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     func cancel(sender: UIBarButtonItem){
         self.animation = "fadeOut"
