@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "touchesMoved(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "touchesBegan(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "doubleClickAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "imagePickerController(_:didFinishPickingImage:editingInfo:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "touchesEnded(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459951243.528501"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "touchesEnded(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoDetail.swift"
-            timestampString = "459950311.583801"
+            timestampString = "459959206.81957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "initSpaceLabel()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "459940772.402033"
+            timestampString = "459967999.231181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "MoLoginController"
             landmarkType = "3">
          </BreakpointContent>

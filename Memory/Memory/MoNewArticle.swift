@@ -86,6 +86,7 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
         contentView = UITextView(frame: CGRectMake(0, 150, self.frame.size.width, self.frame.size.height - 150))
         contentView?.textColor = UIColor(red: 210.0/255, green: 210.0/255, blue: 210.0/225, alpha: 1)
         contentView?.text = "Input the content here..."
+    
         contentView?.delegate = self
         contentView?.font = UIFont(name: "STHeitiJ-Light", size: 16)
         contentView?.backgroundColor = UIColor.clearColor()
@@ -120,7 +121,7 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
         })
     }
     func upload(sender:UIBarButtonItem){
-        
+        (self.superview as! MoDetail).uploadPhoto()
     }
     func done(sender: UIBarButtonItem){
         

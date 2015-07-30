@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
-class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoInfoPhotoDelegate{
+class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoInfoPhotoDelegate, MoNewArticleDelegate{
     
     var loginBlurView: FXBlurView?
     var setUpBlurView: FXBlurView?
@@ -72,6 +73,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         
         detailView = MoDetail(frame: self.view.bounds)
         detailView!.center = CGPointMake(self.view.frame.size.width * (CGFloat(2 * views.count + 1) / 2), self.view.frame.size.height / 2)
+        detailView?.delegate = self
         self.view.addSubview(detailView!)
         views.append(detailView!)
         loadedView.append(false)
@@ -254,9 +256,25 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         infoView?.personPhoto?.blur?.removeFromSuperview()
         infoView?.personPhoto?.personImageView?.image = image
         var imageData = UIImagePNGRepresentation(image)
-        NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
-        NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
+        if (currentView == 0){
+            NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
+            NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
+        }else if (currentView == 1){
+            
+        }
     }
+    
+    
+    //-----------------------------new article upload photo-----------------------------
+    func uploadButtonClick() {
+        var picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        picker.allowsEditing = true
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    
     
 }
 

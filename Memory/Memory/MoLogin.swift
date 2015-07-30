@@ -22,7 +22,6 @@ func initLoginView(view: UIView) -> FXBlurView{
 func initInputPassword(loginBlurView: FXBlurView, text: String){
     passwordInput.backgroundColor = UIColor.clearColor()
     passwordInput.borderStyle = UITextBorderStyle.None
-    passwordInput.delegate = MoLoginController()
     passwordInput.textAlignment = NSTextAlignment.Center
     passwordInput.placeholder = text
     passwordInput.secureTextEntry = true

@@ -11,6 +11,10 @@ import UIKit
 import Spring
 import RealmSwift
 
+protocol MoNewArticleDelegate{
+    func uploadButtonClick()
+}
+
 class MoDetail: MoView{
     
     var spaceLabelTip: SpringLabel?
@@ -20,9 +24,11 @@ class MoDetail: MoView{
     
     var detailTable: MoTable?
     var articles:[MoText] = []
-    //var chosenArticle = 0
+    var firstArticle = MoText()
     
     var newArticles:MoNewArticle?
+    
+    var delegate:MoNewArticleDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,7 +97,14 @@ class MoDetail: MoView{
         newArticles?.curve = "easeIn"
         newArticles?.duration = 1.6
         self.addSubview(newArticles!)
+        newArticles?.titleText?.text = articles[pos].title
+        newArticles?.dateText?.text = articles[pos].date
+        newArticles?.contentView?.text = articles[pos].content
         newArticles?.animate()
+    }
+    
+    func uploadPhoto(){
+        delegate?.uploadButtonClick()
     }
     
     
@@ -128,15 +141,16 @@ class MoDetail: MoView{
     func initArticle(){
         let realm = Realm()
         
+        firstArticle.date = "create new article"
+        let firstPhoto = MoPhoto()
+        firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
+        firstArticle.photos.append(firstPhoto)
+        
         if (FIRST_LOGIN){
-            let firstArticle = MoText()
-            firstArticle.date = "create new article"
-            let firstPhoto = MoPhoto()
-            firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
-            firstArticle.photos.append(firstPhoto)
             realm.write{
-                realm.add(firstArticle)
+                realm.add(self.firstArticle)
             }
+            articles.append(firstArticle)
         }else{
             for each in realm.objects(MoText){
                 articles.append(each)
