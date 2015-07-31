@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Spring
+import RealmSwift
 
 class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
     
@@ -18,6 +19,10 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
     var titleText: UITextField?
     var dateText: UITextField?
     var contentView: UITextView?
+    
+    var newArticle = MoText()
+    
+    var articlePos = 0;
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -121,9 +126,38 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
         })
     }
     func upload(sender:UIBarButtonItem){
-        (self.superview as! MoDetail).uploadPhoto()
+        (self.superview as! MoDetail).uploadPhotoClick()
     }
     func done(sender: UIBarButtonItem){
-        
+        var number = NSUserDefaults.standardUserDefaults().objectForKey("articleNum") ?? "0"
+        newArticle.title = titleText!.text
+        newArticle.content = contentView!.text
+        newArticle.date = dateText!.text
+        let realm = Realm()
+        if (articlePos == 0){
+            self.newArticle.id = (number as! String).toInt()! + 1
+            NSUserDefaults.standardUserDefaults().setObject(String((number as! String).toInt()! + 1), forKey: "articleNum")
+            realm.write{
+                realm.add(self.newArticle, update: true)
+            }
+        }else{
+            self.newArticle.id = self.articlePos
+            realm.write{
+                realm.add(self.newArticle, update: true)
+            }
+        }
+        (self.superview as! MoDetail).detailTable?.updateArticle()
+        self.animation = "fadeOut"
+        self.curve = "easeIn"
+        self.duration = 1.6
+        self.animateToNext({
+            self.removeFromSuperview()
+        })
+    }
+    
+    func uploadingPhoto(image: NSData){
+        var photo = MoPhoto()
+        photo.photo = image
+        newArticle.photos.append(photo)
     }
 }

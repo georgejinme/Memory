@@ -14,5 +14,10 @@ class MoText: Object{
     dynamic var date = ""
     dynamic var wordNum = 0
     dynamic var content = ""
+    dynamic var id = 0
     let photos = List<MoPhoto>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

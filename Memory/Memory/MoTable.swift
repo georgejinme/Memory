@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Spring
+import RealmSwift
 
 class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     var moTable: UITableView?
@@ -19,9 +20,9 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     
     var contents: [MoText] = []
     
-    init(frame: CGRect, c: [MoText]) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contents = c
+        initArticle()
         initShowRow()
         self.moTable = UITableView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height), style: UITableViewStyle.Plain)
         self.moTable?.delegate = self
@@ -50,7 +51,9 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         if (indexPath.row >= showRow){
             cell.horizenLine?.frame.size.width = 300
         }
-        cell.articlePhoto?.image = UIImage(data: contents[indexPath.row].photos[0].photo)
+        if (contents[indexPath.row].photos.count != 0){
+            cell.articlePhoto?.image = UIImage(data: contents[indexPath.row].photos[0].photo)
+        }
         cell.articlePhoto?.animate()
         cell.date?.text = contents[indexPath.row].date
         cell.date?.animate()
@@ -59,7 +62,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     
     
     func drawSeperateLine(time: Int){
-        if (time == Int(self.frame.size.height) / Int(cellHeight) + 1) {
+        if (time >= Int(self.frame.size.height) / Int(cellHeight) + 1) {
             return
         }else{
             var verticalLine = UIView(frame: CGRectMake(0, CGFloat(time) * cellHeight, 2, 0))
@@ -83,8 +86,31 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         }
     }
     
+    func initArticle(){
+        contents = []
+        let realm = Realm()
+        var firstArticle = MoText()
+        firstArticle.date = "create new article"
+        let firstPhoto = MoPhoto()
+        firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
+        firstPhoto.photoId = 0
+        firstArticle.photos.append(firstPhoto)
+        firstArticle.id = 0
+        for each in realm.objects(MoText){
+            contents.append(each)
+        }
+        if (contents.count == 0){
+            realm.write{
+                realm.deleteAll()
+                realm.add(firstArticle)
+            }
+            contents.append(firstArticle)
+        }
+    }
+    
     func initShowRow(){
         totalRow = self.contents.count
+
         var height = CGFloat(totalRow) * cellHeight
         if (height < self.frame.size.height){
             showRow = totalRow
@@ -92,6 +118,16 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         else {
             showRow = Int(self.frame.size.height) / Int(cellHeight) + 1
         }
+    }
+    
+    func updateArticle(){
+        initArticle()
+        initShowRow()
+        if (totalRow == showRow){
+            drawSeperateLine(0)
+        }
+        (self.superview as! MoDetail).articleNum?.text = NSUserDefaults.standardUserDefaults().objectForKey("articleNum") as? String
+        self.moTable?.reloadData()
     }
     
 }

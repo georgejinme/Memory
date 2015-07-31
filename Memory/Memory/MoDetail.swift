@@ -19,12 +19,8 @@ class MoDetail: MoView{
     
     var spaceLabelTip: SpringLabel?
     var articleNum: SpringLabel?
-    var photoNum: SpringLabel?
-    var wordNum: SpringLabel?
     
     var detailTable: MoTable?
-    var articles:[MoText] = []
-    var firstArticle = MoText()
     
     var newArticles:MoNewArticle?
     
@@ -32,7 +28,6 @@ class MoDetail: MoView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initArticle()
         initSpaceLabel()
     }
     
@@ -55,20 +50,6 @@ class MoDetail: MoView{
         articleNum?.textColor = UIColor.whiteColor()
         articleNum?.text = "Articles: " + ((store.objectForKey("articleNum") ?? String(0)) as! String)
         articleNum?.textAlignment = NSTextAlignment.Right
-        
-        photoNum = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        photoNum?.center = CGPointMake(self.frame.size.width / 2, 125)
-        photoNum?.font = UIFont(name: "STHeitiJ-Light", size: 24)
-        photoNum?.textColor = UIColor.whiteColor()
-        photoNum?.text = "Photos: " + ((store.objectForKey("photoNum") ?? String(0)) as! String)
-        photoNum?.textAlignment = NSTextAlignment.Right
-        
-        wordNum = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
-        wordNum?.center = CGPointMake(self.frame.size.width / 2, 175)
-        wordNum?.font = UIFont(name: "STHeitiJ-Light", size: 24)
-        wordNum?.textColor = UIColor.whiteColor()
-        wordNum?.text = "Words: " + ((store.objectForKey("wordNum") ?? String(0)) as! String)
-        wordNum?.textAlignment = NSTextAlignment.Right
     }
     
     func drawLineSperator(start: CGFloat, end: CGFloat, y: CGFloat, duration: NSTimeInterval){
@@ -87,7 +68,7 @@ class MoDetail: MoView{
     }
     
     func initDetailTable(){
-        detailTable = MoTable(frame: CGRectMake(40, 200, self.frame.size.width - 20, self.frame.size.height - 200), c: articles)
+        detailTable = MoTable(frame: CGRectMake(40, 100, self.frame.size.width - 20, self.frame.size.height - 100))
         self.addSubview(detailTable!)
     }
     
@@ -97,16 +78,16 @@ class MoDetail: MoView{
         newArticles?.curve = "easeIn"
         newArticles?.duration = 1.6
         self.addSubview(newArticles!)
-        newArticles?.titleText?.text = articles[pos].title
-        newArticles?.dateText?.text = articles[pos].date
-        newArticles?.contentView?.text = articles[pos].content
+        newArticles?.titleText?.text = detailTable?.contents[pos].title
+        newArticles?.dateText?.text = detailTable?.contents[pos].date
+        newArticles?.contentView?.text = detailTable?.contents[pos].content
+        newArticles?.articlePos = pos
         newArticles?.animate()
     }
     
-    func uploadPhoto(){
+    func uploadPhotoClick(){
         delegate?.uploadButtonClick()
     }
-    
     
     
     override func beginAnimate() {
@@ -121,41 +102,9 @@ class MoDetail: MoView{
             self.articleNum?.duration = 1.5
             self.articleNum?.animate()
             
-            self.addSubview(self.photoNum!)
-            self.photoNum?.animation = "fadeInRight"
-            self.photoNum?.curve = "easeIn"
-            self.photoNum?.duration = 1.5
-            self.photoNum?.animate()
-            
-            self.addSubview(self.wordNum!)
-            self.wordNum?.animation = "fadeInRight"
-            self.wordNum?.curve = "easeIn"
-            self.wordNum?.duration = 1.5
-            self.wordNum?.animate()
-            
-            self.drawLineSperator(0, end: self.frame.size.width, y: 200, duration: 1.5)
+            self.drawLineSperator(0, end: self.frame.size.width, y: 100, duration: 1.5)
             self.initDetailTable()
         })
-    }
-    
-    func initArticle(){
-        let realm = Realm()
-        
-        firstArticle.date = "create new article"
-        let firstPhoto = MoPhoto()
-        firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
-        firstArticle.photos.append(firstPhoto)
-        
-        if (FIRST_LOGIN){
-            realm.write{
-                realm.add(self.firstArticle)
-            }
-            articles.append(firstArticle)
-        }else{
-            for each in realm.objects(MoText){
-                articles.append(each)
-            }
-        }
     }
 }
 

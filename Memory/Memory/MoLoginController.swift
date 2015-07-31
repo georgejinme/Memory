@@ -185,6 +185,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         if (FIRST_LOGIN){
             if ((passwordInput.text as NSString).length > 4){
                 NSUserDefaults.standardUserDefaults().setObject(passwordInput.text, forKey: "password")
+                FIRST_LOGIN = false
                 println("set password")
                 return "success"
             }else{
@@ -261,6 +262,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
             NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
         }else if (currentView == 1){
             
+            self.detailView?.newArticles?.uploadingPhoto(imageData)
         }
     }
     
