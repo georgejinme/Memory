@@ -52,7 +52,8 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
             cell.horizenLine?.frame.size.width = 300
         }
         if (contents[indexPath.row].photos.count != 0){
-            cell.articlePhoto?.image = UIImage(data: contents[indexPath.row].photos[0].photo)
+            var photoPos = contents[indexPath.row].photos.count
+            cell.articlePhoto?.image = UIImage(data: contents[indexPath.row].photos[photoPos - 1].photo)
         }
         cell.articlePhoto?.animate()
         cell.date?.text = contents[indexPath.row].date
