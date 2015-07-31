@@ -123,7 +123,7 @@ class MoInfo:MoView{
         var beginTimeString = NSUserDefaults.standardUserDefaults().objectForKey("memoryBeginTime") as! String
         var beginDate = format.dateFromString(beginTimeString)
         if (beginDate == nil){
-            var alert = UIAlertView(title: "Warning", message: "Invaild date format. Please input the date with format 'YYYYMMDD'in setting view", delegate: self, cancelButtonTitle: "OK")
+            var alert = UIAlertView(title: "Warning", message: "Invaild date format. Please input the date with format 'YYYYMMDD'in login view", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         }else{
             memoryTimeSecond = NSInteger(date.timeIntervalSinceDate(beginDate!))
