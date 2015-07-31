@@ -129,7 +129,7 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
         (self.superview as! MoDetail).uploadPhotoClick()
     }
     func done(sender: UIBarButtonItem){
-        var number = NSUserDefaults.standardUserDefaults().objectForKey("articleNum") ?? "0"
+        var number: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("articleNum") ?? "0"
         newArticle.title = titleText!.text
         newArticle.content = contentView!.text
         newArticle.date = dateText!.text
@@ -138,7 +138,7 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
             self.newArticle.id = (number as! String).toInt()! + 1
             NSUserDefaults.standardUserDefaults().setObject(String((number as! String).toInt()! + 1), forKey: "articleNum")
             realm.write{
-                realm.add(self.newArticle, update: true)
+                realm.add(self.newArticle)
             }
         }else{
             self.newArticle.id = self.articlePos

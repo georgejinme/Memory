@@ -89,17 +89,16 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
     func initArticle(){
         contents = []
         let realm = Realm()
-        var firstArticle = MoText()
-        firstArticle.date = "create new article"
-        let firstPhoto = MoPhoto()
-        firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
-        firstPhoto.photoId = 0
-        firstArticle.photos.append(firstPhoto)
-        firstArticle.id = 0
         for each in realm.objects(MoText){
             contents.append(each)
         }
         if (contents.count == 0){
+            var firstArticle = MoText()
+            firstArticle.date = "create new article"
+            let firstPhoto = MoPhoto()
+            firstPhoto.photo = UIImagePNGRepresentation(UIImage(named: "add"))
+            firstArticle.photos.append(firstPhoto)
+            firstArticle.id = 0
             realm.write{
                 realm.deleteAll()
                 realm.add(firstArticle)

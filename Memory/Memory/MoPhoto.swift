@@ -11,9 +11,4 @@ import RealmSwift
 
 class MoPhoto: Object{
     dynamic var photo = NSData()
-    dynamic var photoId = 0
-    
-    override static func primaryKey() -> String? {
-        return "photoId"
-    }
 }

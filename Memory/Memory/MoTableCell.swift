@@ -38,7 +38,7 @@ class MoTableCell: UITableViewCell{
         articlePhoto?.addGestureRecognizer(photoTapGesture)
         self.addSubview(articlePhoto!)
         
-        date = SpringLabel(frame: CGRectMake(self.frame.size.height + 25, 0, self.frame.size.width - self.frame.size.height, 50))
+        date = SpringLabel(frame: CGRectMake(self.frame.size.height + 30, 0, self.frame.size.width - self.frame.size.height, 50))
         date?.center.y = (self.frame.size.height + 25) / 2
         date?.font = UIFont(name: "STHeitiJ-Light", size: 24)
         date?.textColor = UIColor.whiteColor()
