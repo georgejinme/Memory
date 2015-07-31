@@ -28,6 +28,9 @@ class MoInfo:MoView{
         initPhoto()
         initPlaceLabel()
         initTimeLabel()
+        if (!FIRST_LOGIN){
+            calculateTime()
+        }
     }
 
     required init(coder aDecoder: NSCoder) {

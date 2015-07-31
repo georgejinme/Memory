@@ -126,7 +126,7 @@ class MoTable: UIView, UITableViewDelegate,UITableViewDataSource{
         if (totalRow == showRow){
             drawSeperateLine(0)
         }
-        (self.superview as! MoDetail).articleNum?.text = NSUserDefaults.standardUserDefaults().objectForKey("articleNum") as? String
+        (self.superview as! MoDetail).articleNum?.text = "Articles: " + (NSUserDefaults.standardUserDefaults().objectForKey("articleNum") as! String)
         self.moTable?.reloadData()
     }
     

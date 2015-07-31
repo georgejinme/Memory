@@ -142,6 +142,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
                         self.loadedView.removeAtIndex(0)
                         self.oldView = 0
                         self.currentView = 0
+                        self.setUping = false
                     }
                 }
                 if (self.views[self.oldView] != self.loginBlurView && self.views[self.currentView] != self.loginBlurView && self.views[self.oldView] != self.setUpBlurView && self.views[self.currentView] != self.setUpBlurView){
@@ -185,7 +186,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         if (FIRST_LOGIN){
             if ((passwordInput.text as NSString).length > 4){
                 NSUserDefaults.standardUserDefaults().setObject(passwordInput.text, forKey: "password")
-                FIRST_LOGIN = false
                 println("set password")
                 return "success"
             }else{

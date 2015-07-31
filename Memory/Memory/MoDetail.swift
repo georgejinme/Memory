@@ -78,9 +78,11 @@ class MoDetail: MoView{
         newArticles?.curve = "easeIn"
         newArticles?.duration = 1.6
         self.addSubview(newArticles!)
-        newArticles?.titleText?.text = detailTable?.contents[pos].title
-        newArticles?.dateText?.text = detailTable?.contents[pos].date
-        newArticles?.contentView?.text = detailTable?.contents[pos].content
+        if pos != 0{
+            newArticles?.titleText?.text = detailTable?.contents[pos].title
+            newArticles?.dateText?.text = detailTable?.contents[pos].date
+            newArticles?.contentView?.text = detailTable?.contents[pos].content
+        }
         newArticles?.articlePos = pos
         newArticles?.animate()
     }
