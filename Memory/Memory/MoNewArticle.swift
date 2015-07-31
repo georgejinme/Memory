@@ -24,10 +24,19 @@ class MoNewArticle: SpringView, UITextViewDelegate, UITextFieldDelegate{
     
     var articlePos = 0;
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, position: Int, photos:[NSData]) {
         super.init(frame: frame)
         self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.borderWidth = 1
+        articlePos = position
+        if articlePos != 0{
+            for each in photos{
+                var photo = MoPhoto()
+                photo.photo = each
+                newArticle.photos.append(photo)
+            }
+        }
+        
         initImage()
         initToolBar()
         initTextSection()

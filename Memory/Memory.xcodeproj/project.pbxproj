@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F55A0AEE00CCAA790FCB940B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE5E438ED408A981E4C9C72 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FF129D941B6B4C6D00DF0EB8 /* PhotoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF129D931B6B4C6D00DF0EB8 /* PhotoStackView.swift */; };
+		FF129D961B6B4CB600DF0EB8 /* MoArticlePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF129D951B6B4CB600DF0EB8 /* MoArticlePhoto.swift */; };
 		FF26F1121B6524F1002A8428 /* MoInfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26F1111B6524F1002A8428 /* MoInfoImage.swift */; };
 		FF41A29F1B6A3EBC00060C25 /* MoNewArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */; };
 		FF49956B1B6274FA009D694A /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FF49956A1B6274FA009D694A /* TwinkleImage.png */; };
@@ -66,6 +68,8 @@
 		2C50A26F9D20C5E7256FEDEE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		37E6CFC9162E3D5E69B56671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AE5E438ED408A981E4C9C72 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF129D931B6B4C6D00DF0EB8 /* PhotoStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStackView.swift; sourceTree = "<group>"; };
+		FF129D951B6B4CB600DF0EB8 /* MoArticlePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoArticlePhoto.swift; sourceTree = "<group>"; };
 		FF26F1111B6524F1002A8428 /* MoInfoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoInfoImage.swift; sourceTree = "<group>"; };
 		FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoNewArticle.swift; sourceTree = "<group>"; };
 		FF49956A1B6274FA009D694A /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinkleImage.png; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				FFE0007B1B675E2700F44C5D /* MoDetail.swift */,
 				FF41A29E1B6A3EBC00060C25 /* MoNewArticle.swift */,
+				FF129D951B6B4CB600DF0EB8 /* MoArticlePhoto.swift */,
 				FFE1C76F1B6897BB00CE0D4D /* MoTable.swift */,
 				FFE1C7721B689B5700CE0D4D /* MoTableCell.swift */,
 			);
@@ -267,6 +272,7 @@
 				FFF1804A1B5F6CAD00C450DE /* FXBlurView.h */,
 				FFF1804B1B5F6CAD00C450DE /* FXBlurView.m */,
 				FFF180491B5F6CAC00C450DE /* Memory-Bridging-Header.h */,
+				FF129D931B6B4C6D00DF0EB8 /* PhotoStackView.swift */,
 			);
 			name = ThirdLib;
 			sourceTree = "<group>";
@@ -455,6 +461,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF129D961B6B4CB600DF0EB8 /* MoArticlePhoto.swift in Sources */,
+				FF129D941B6B4C6D00DF0EB8 /* PhotoStackView.swift in Sources */,
 				FFE1C7731B689B5700CE0D4D /* MoTableCell.swift in Sources */,
 				FFE0007C1B675E2700F44C5D /* MoDetail.swift in Sources */,
 				FF4995721B629E67009D694A /* MoView.swift in Sources */,

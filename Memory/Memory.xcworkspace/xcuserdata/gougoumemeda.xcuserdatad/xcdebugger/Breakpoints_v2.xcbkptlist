@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoLoginController.swift"
-            timestampString = "460011029.334516"
+            timestampString = "460020672.584271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "261"
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoDetail.swift"
-            timestampString = "460009884.776789"
+            timestampString = "460017717.281316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "initSpaceLabel()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoNewArticle.swift"
-            timestampString = "460006289.288664"
+            timestampString = "460021771.711428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "done(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,12 +330,121 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Memory/MoNewArticle.swift"
-            timestampString = "460006126.295139"
+            timestampString = "460021771.711428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "done(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memory/MoArticlePhoto.swift"
+            timestampString = "460019577.713523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MoArticlePhoto"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memory.MoArticlePhoto.photos.getter : Swift.Array&lt;ObjectiveC.UIImage&gt;"
+                  moduleName = "Memory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gougoumemeda/Memory/Memory/Memory/MoArticlePhoto.swift"
+                  timestampString = "460019577.753063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memory.MoArticlePhoto.photos.setter : Swift.Array&lt;ObjectiveC.UIImage&gt;"
+                  moduleName = "Memory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gougoumemeda/Memory/Memory/Memory/MoArticlePhoto.swift"
+                  timestampString = "460019577.755755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memory.MoArticlePhoto.init (Memory.MoArticlePhoto.Type)(frame : C.CGRect) -&gt; Memory.MoArticlePhoto"
+                  moduleName = "Memory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gougoumemeda/Memory/Memory/Memory/MoArticlePhoto.swift"
+                  timestampString = "460019577.755928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memory.MoArticlePhoto.init (Memory.MoArticlePhoto.Type)(coder : ObjectiveC.NSCoder) -&gt; Memory.MoArticlePhoto"
+                  moduleName = "Memory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gougoumemeda/Memory/Memory/Memory/MoArticlePhoto.swift"
+                  timestampString = "460019577.756064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memory.MoArticlePhoto.photos.materializeForSet : Swift.Array&lt;ObjectiveC.UIImage&gt;"
+                  moduleName = "Memory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gougoumemeda/Memory/Memory/Memory/MoArticlePhoto.swift"
+                  timestampString = "460019577.756192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memory/MoNewArticle.swift"
+            timestampString = "460021771.711428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(frame:position:photos:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

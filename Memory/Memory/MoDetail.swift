@@ -23,6 +23,7 @@ class MoDetail: MoView{
     var detailTable: MoTable?
     
     var newArticles:MoNewArticle?
+    var photoViewer:MoArticlePhoto?
     
     var delegate:MoNewArticleDelegate?
     
@@ -73,7 +74,11 @@ class MoDetail: MoView{
     }
     
     func initNewArticleView(pos: Int){
-        newArticles = MoNewArticle(frame: CGRectMake(40, 40, self.frame.size.width - 80, self.frame.size.height - 80))
+        var data:[NSData] = []
+        for (var i = 0; i < detailTable?.contents[pos].photos.count; ++i){
+            data.append((detailTable!.contents[pos].photos as List<MoPhoto>)[i].photo)
+        }
+        newArticles = MoNewArticle(frame: CGRectMake(40, 40, self.frame.size.width - 80, self.frame.size.height - 80), position: pos, photos: data)
         newArticles?.animation = "fadeInUp"
         newArticles?.curve = "easeIn"
         newArticles?.duration = 1.6
@@ -83,12 +88,27 @@ class MoDetail: MoView{
             newArticles?.dateText?.text = detailTable?.contents[pos].date
             newArticles?.contentView?.text = detailTable?.contents[pos].content
         }
-        newArticles?.articlePos = pos
         newArticles?.animate()
     }
     
     func uploadPhotoClick(){
         delegate?.uploadButtonClick()
+    }
+    
+    func initArticlePhotoView(pos: Int){
+        if (pos != 0){
+            var data: [NSData] = []
+            for (var i = 0; i < detailTable?.contents[pos].photos.count; ++i){
+                data.append((detailTable!.contents[pos].photos as List<MoPhoto>)[i].photo)
+            }
+            
+            photoViewer = MoArticlePhoto(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height), data: data)
+            photoViewer?.animation = "fadeInUp"
+            photoViewer?.curve = "easeIn"
+            photoViewer?.duration = 1.6
+            self.addSubview(photoViewer!)
+            photoViewer?.animate()
+        }
     }
     
     

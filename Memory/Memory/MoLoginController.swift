@@ -254,14 +254,13 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         picker.dismissViewControllerAnimated(true, completion: nil)
-        infoView?.personPhoto?.blur?.removeFromSuperview()
-        infoView?.personPhoto?.personImageView?.image = image
         var imageData = UIImagePNGRepresentation(image)
         if (currentView == 0){
+            infoView?.personPhoto?.blur?.removeFromSuperview()
+            infoView?.personPhoto?.personImageView?.image = image
             NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "personImage")
             NSUserDefaults.standardUserDefaults().setObject("1", forKey: "photoNum")
         }else if (currentView == 1){
-            
             self.detailView?.newArticles?.uploadingPhoto(imageData)
         }
     }

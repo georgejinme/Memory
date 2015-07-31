@@ -63,7 +63,7 @@ class MoTableCell: UITableViewCell{
     }
     
     func photo(sender: UITapGestureRecognizer){
-        
+        (self.superview?.superview?.superview?.superview as! MoDetail).initArticlePhotoView(self.position)
     }
     
     func date(sender: UITapGestureRecognizer){
