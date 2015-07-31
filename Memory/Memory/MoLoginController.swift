@@ -20,7 +20,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
     var beginLoc: CGPoint = CGPoint()
     
     var loginRequest: Bool = false
-    var setUping:Bool = false
     
     var views: [UIView] = []
     var currentView = 0
@@ -44,24 +43,27 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         views.append(loginBlurView!)
         loadedView.append(false)
         if (FIRST_LOGIN){
-            loginPlaceHolder = "Please Set Your Password. Left Swipe to Confirm"
+            loginPlaceHolder = "Set Your Password. Left Swipe to Confirm"
         }else{
-            loginPlaceHolder = "Please Input Your Password. Left Swipe to Login"
+            loginPlaceHolder = "Input Your Password. Left Swipe to Login"
         }
         initInputPassword(loginBlurView!, loginPlaceHolder)
+        initChangeInfoButton(loginBlurView!)
+        changeInfoButton.addTarget(self, action: "changeInfo:", forControlEvents: UIControlEvents.TouchUpInside)
         passwordInput.delegate = self
         
+        setUpBlurView = initSetUpView(self.view)
+        initMyPlace(setUpBlurView!, "Where am I?")
+        initUrPlace(setUpBlurView!, "Where are you?")
+        initMemoryTime(setUpBlurView!, "When did your memory begin(YYYYMMDD)?")
+        myPlaceSetUp.delegate = self
+        urPlaceSetUp.delegate = self
+        timeSetUp.delegate = self
+        
         if (FIRST_LOGIN){
-            setUpBlurView = initSetUpView(self.view)
             self.view.addSubview(setUpBlurView!)
             loadedView.append(false)
             views.append(setUpBlurView!)
-            initMyPlace(setUpBlurView!, "Where am I?")
-            initUrPlace(setUpBlurView!, "Where are you?")
-            initMemoryTime(setUpBlurView!, "When did your memory begin(YYYYMMDD)?")
-            myPlaceSetUp.delegate = self
-            urPlaceSetUp.delegate = self
-            timeSetUp.delegate = self
         }
         
         infoView = MoInfo(frame: self.view.bounds)
@@ -111,7 +113,6 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
                 }
             }else if views[oldView] == setUpBlurView{
                 setUp()
-                infoView!.calculateTime()
             }
         }
         
@@ -137,12 +138,12 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
                         self.loadedView.removeAtIndex(0)
                         self.oldView = 0
                         self.currentView = 0
-                    }else if (self.setUping){
+                    }else if (SETTING){
                         self.views.removeAtIndex(0)
                         self.loadedView.removeAtIndex(0)
                         self.oldView = 0
                         self.currentView = 0
-                        self.setUping = false
+                        SETTING = false
                     }
                 }
                 if (self.views[self.oldView] != self.loginBlurView && self.views[self.currentView] != self.loginBlurView && self.views[self.oldView] != self.setUpBlurView && self.views[self.currentView] != self.setUpBlurView){
@@ -181,6 +182,16 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         return true
     }
     
+    func changeInfo(sender: UIButton){
+        if (!FIRST_LOGIN){
+            self.view.addSubview(setUpBlurView!)
+            loadedView.append(false)
+            views.insert(setUpBlurView!, atIndex: 1)
+            passwordInput.placeholder = "Input Your Password and Set Info"
+            changeInfoButton.enabled = false
+        }
+    }
+    
     func login() -> String{
         loginRequest = false
         if (FIRST_LOGIN){
@@ -216,7 +227,7 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         store.setObject(urplaceText, forKey: "urplace")
         store.setObject(myplaceText, forKey: "myplace")
         store.setObject(timeText, forKey: "memoryBeginTime")
-        setUping = true
+        SETTING = true
         println("set up done!")
     }
     

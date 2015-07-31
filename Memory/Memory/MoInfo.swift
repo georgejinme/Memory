@@ -28,9 +28,6 @@ class MoInfo:MoView{
         initPhoto()
         initPlaceLabel()
         initTimeLabel()
-        if (!FIRST_LOGIN){
-            calculateTime()
-        }
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -71,6 +68,7 @@ class MoInfo:MoView{
     }
     
     override func beginAnimate(){
+        calculateTime()
         self.addSubview(personPhoto!)
         personPhoto?.animateNext({
             self.addSubview(self.urPlace!)
@@ -102,6 +100,7 @@ class MoInfo:MoView{
                         self.memoryTime?.curve = "easeIn"
                         self.memoryTime?.duration = 2.5
                         self.memoryTime?.animate()
+                        
                     })
                 })
             })

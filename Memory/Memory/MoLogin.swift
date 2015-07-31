@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 var passwordInput = UITextField()
+var changeInfoButton = UIButton()
 
 func initLoginView(view: UIView) -> FXBlurView{
     var loginBlurView = FXBlurView(frame: CGRectMake(0, 0, view.frame.size.width, 50.0))
@@ -31,3 +32,15 @@ func initInputPassword(loginBlurView: FXBlurView, text: String){
     passwordInput.frame = CGRectMake(0, 0, loginBlurView.frame.size.width, 50)
     loginBlurView.addSubview(passwordInput)
 }
+
+func initChangeInfoButton(view: FXBlurView){
+    changeInfoButton = UIButton(frame: CGRectMake(0, 0, 50, 50))
+    changeInfoButton.setImage(UIImage(named: "setting"), forState: UIControlState.Normal)
+    if (FIRST_LOGIN){
+        changeInfoButton.enabled = false
+    }
+    view.addSubview(changeInfoButton)
+}
+
+
+
