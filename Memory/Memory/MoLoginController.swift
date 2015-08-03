@@ -43,9 +43,9 @@ class MoLoginController: MoBGController, UITextFieldDelegate, UIGestureRecognize
         views.append(loginBlurView!)
         loadedView.append(false)
         if (FIRST_LOGIN){
-            loginPlaceHolder = "Set Your Password. Left Swipe to Confirm"
+            loginPlaceHolder = "Set Your Password. Swipe Left to Confirm"
         }else{
-            loginPlaceHolder = "Input Your Password. Left Swipe to Login"
+            loginPlaceHolder = "Input Your Password. Swipe Left to Login"
         }
         initInputPassword(loginBlurView!, loginPlaceHolder)
         initChangeInfoButton(loginBlurView!)

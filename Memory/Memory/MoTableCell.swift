@@ -27,12 +27,15 @@ class MoTableCell: UITableViewCell{
         horizenLine?.backgroundColor = UIColor.whiteColor()
         self.addSubview(horizenLine!)
         
-        articlePhoto = SpringImageView(frame: CGRectMake(0, 0, self.frame.size.height + 25, self.frame.size.height + 25))
+        articlePhoto = SpringImageView(frame: CGRectMake(0, 0, self.frame.size.height + 10, self.frame.size.height + 10))
         articlePhoto?.animation = "fadeIn"
         articlePhoto?.curve = "easeIn"
         articlePhoto?.duration = 2.5
+        articlePhoto?.center = CGPointMake((self.frame.size.height + 25) / 2, (self.frame.size.height + 25) / 2)
         articlePhoto?.userInteractionEnabled = true
         articlePhoto?.multipleTouchEnabled = true
+        articlePhoto?.layer.cornerRadius = (self.frame.size.height + 10) / 2
+        articlePhoto?.layer.masksToBounds = true
         var photoTapGesture = UITapGestureRecognizer(target: self, action: "photo:")
         photoTapGesture.numberOfTapsRequired = 1
         articlePhoto?.addGestureRecognizer(photoTapGesture)

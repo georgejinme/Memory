@@ -43,7 +43,7 @@ class MoDetail: MoView{
         spaceLabelTip?.center = CGPointMake(self.frame.size.width / 2, 25)
         spaceLabelTip?.font = UIFont(name: "STHeitiJ-Light", size: 24)
         spaceLabelTip?.textColor = UIColor.whiteColor()
-        spaceLabelTip?.text = "Your memory space included "
+        spaceLabelTip?.text = "Our memory included "
         
         articleNum = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         articleNum?.center = CGPointMake(self.frame.size.width / 2, 75)
