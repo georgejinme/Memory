@@ -320,6 +320,7 @@
 				5569DDCEF13AFF8157F68E1C /* Embed Pods Frameworks */,
 				D6FB3740673933BDFAB84784 /* Copy Pods Resources */,
 				FFE000891B67827700F44C5D /* Embed Frameworks */,
+				FFABB3F41B6F290F007D3D74 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -453,6 +454,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FFABB3F41B6F290F007D3D74 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -636,6 +650,7 @@
 				);
 				INFOPLIST_FILE = Memory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memory-Bridging-Header.h";
 			};

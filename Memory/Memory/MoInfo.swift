@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Twinkle
 import Spring
 
 class MoInfo:MoView{
@@ -41,11 +40,11 @@ class MoInfo:MoView{
     func initPlaceLabel(){
         urPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         urPlace?.center = CGPointMake(self.frame.size.width / 2, 25 + self.frame.size.width)
-        urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 30)
+        urPlace?.font = UIFont(name: "STHeitiJ-Light", size: 24)
         urPlace?.textColor = UIColor.whiteColor()
         myPlace = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         myPlace?.center = CGPointMake(self.frame.size.width / 2, 75 + self.frame.size.width)
-        myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 30)
+        myPlace?.font = UIFont(name: "STHeitiJ-Light", size: 24)
         myPlace?.textColor = UIColor.whiteColor()
         myPlace?.textAlignment = NSTextAlignment.Right
     }
@@ -53,14 +52,14 @@ class MoInfo:MoView{
     func initTimeLabel(){
         timeTips = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 50))
         timeTips?.center = CGPointMake(self.frame.size.width / 2, 125 + self.frame.size.width)
-        timeTips?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        timeTips?.font = UIFont(name: "STHeitiJ-Light", size: 20)
         timeTips?.textColor = UIColor.whiteColor()
         timeTips?.text = "Our memory has lasted for..."
         timeTips?.textAlignment = NSTextAlignment.Center
         
         memoryTime = SpringLabel(frame: CGRectMake(0, 0, self.frame.size.width - 20, 60))
         memoryTime?.center = CGPointMake(self.frame.size.width / 2, 175 + self.frame.size.width)
-        memoryTime?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        memoryTime?.font = UIFont(name: "STHeitiJ-Light", size: 20)
         memoryTime?.textColor = UIColor.yellowColor()
         memoryTime?.text = memoryTimeString
         memoryTime?.textAlignment = NSTextAlignment.Center

@@ -43,7 +43,7 @@ class MoTableCell: UITableViewCell{
         
         date = SpringLabel(frame: CGRectMake(self.frame.size.height + 30, 0, self.frame.size.width - self.frame.size.height, 50))
         date?.center.y = (self.frame.size.height + 25) / 2
-        date?.font = UIFont(name: "STHeitiJ-Light", size: 24)
+        date?.font = UIFont(name: "STHeitiJ-Light", size: 20)
         date?.textColor = UIColor.whiteColor()
         date?.animation = "fadeIn"
         date?.curve = "easeIn"

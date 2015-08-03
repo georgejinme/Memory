@@ -60,7 +60,7 @@ class MoInfoImage: SpringView{
             
             var tipLabel = UILabel(frame: CGRectMake(0, 0, blur!.frame.size.width, 50))
             tipLabel.center = CGPointMake(blur!.frame.size.width / 2, blur!.frame.size.height / 2)
-            tipLabel.text = "Double Press to Upload a photo"
+            tipLabel.text = "Double Click to Upload a photo"
             tipLabel.textColor = UIColor.whiteColor()
             tipLabel.textAlignment = NSTextAlignment.Center
             tipLabel.font = UIFont(name: "STHeitiJ-Light", size: 16)
